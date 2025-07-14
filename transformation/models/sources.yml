@@ -6,15 +6,12 @@ sources:
     schema: raw
     tables:
       - name: customers
-        description: ""
+        description: "customers"
       - name: accounts
-        description: ""
+        description: "accounts"
       - name: fx_rates
-        description: ""
+        description: "fx_rates"
       - name: loans
-        description: ""
+        description: "loans"
       - name: transactions
-        description: ""
-
-
-
+        description: "transactions"
