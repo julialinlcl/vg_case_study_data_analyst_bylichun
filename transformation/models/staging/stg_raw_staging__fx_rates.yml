@@ -1,6 +1,6 @@
 models:
   - name: stg_raw_staging__fx_rates
-    description: ""
+    description: "Staging model for foreign exchange rates"
     columns:
       - name: currency_iso_code
         data_type: varchar

@@ -43,3 +43,6 @@ models:
       - name: has_date_parsing_error
         data_type: boolean
         description: "Indicates if there was a date parsing error"
+        tests:
+          - not_null
+        

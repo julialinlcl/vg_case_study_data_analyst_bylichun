@@ -50,12 +50,21 @@ models:
       - name: firstname
         data_type: varchar
         description: "Customer's first name with trimmed whitespace"
+        tests:
+          - not_null
       - name: lastname
         data_type: varchar
         description: "Customer's last name with trimmed whitespace"
+        tests:
+          - not_null
       - name: age
         data_type: integer
         description: "Customer's age"
+        tests:
+          - not_null
+          - accepted_range:
+              min_value: 0
+              inclusive: true
       - name : branch_id
         data_type: integer
         description: "Branch ID where the customer is associated"

@@ -1,4 +1,13 @@
-with staging as (
+
+  
+    
+    
+
+    create  table
+      "casestudy"."intermediate"."stg_staging_intermediate__currencies__dbt_tmp"
+  
+    as (
+      with staging as (
     select * from "casestudy"."raw"."currencies"
 ),
 cleaned as (
@@ -15,3 +24,6 @@ cleaned as (
 )
 
 select * from cleaned
+    );
+  
+  

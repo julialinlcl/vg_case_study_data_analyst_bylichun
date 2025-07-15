@@ -1,0 +1,40 @@
+
+version: 2
+
+models:
+  - name: customer_account_transaction_summary
+    description: >
+      Combines customer, account, transaction, loan, and FX rate data to
+      provide a summary of financial activity per customer.
+    columns:
+      - name: customer_id
+        description: Unique identifier for the customer.
+      - name: firstname
+        description: Customer's first name.
+      - name: lastname
+        description: Customer's last name.
+      - name: age
+        description: Customer's age.
+      - name: account_id
+        description: Unique identifier for the account.
+      - name: account_type
+        description: Type of the account (e.g., savings, checking).
+      - name: account_opening_date
+        description: Date when the account was opened.
+      - name: transaction_currency
+        description: Currency in which the transactions were made.
+      - name: total_transaction_amount
+        description: Total transaction amount in the original currency.
+      - name: total_transaction_amount_eur
+        description: Total transaction amount converted to EUR.
+      - name: loan_status
+        description: Status of the customer's loan (e.g., active, closed).
+      - name: loan_amount
+        description: Amount of the loan taken by the customer.
+      - name: interest_rate
+        description: Interest rate applied to the loan.
+    tags:
+      - marts
+      - finance
+      - customer_summary
+
