@@ -37,7 +37,7 @@ models:
         description: "Date of account opening"
         tests:
           - date_is_past
-      - name: account_openinig_date_raw
+      - name: account_opening_date_raw
         data_type: varchar
         description: "Raw account opening date string"
       - name: has_date_parsing_error
