@@ -40,8 +40,8 @@ You'll be working primarily with the **Branch Performance Manager** who needs to
 
 **Setup:**
 
-1. [ ] Please create a repository and commit this content (or clone and change remote)
-2. [ ] Start the devcontainer in the repository
+1. [x] Please create a repository and commit this content (or clone and change remote)
+2. [x] Start the devcontainer in the repository
 3. [ ] Set up dbt project structure and configuration
 4. [ ] Set up PowerBI Desktop and configure data ingestion from the database
 5. [ ] Create a PowerBI workspace for your analysis

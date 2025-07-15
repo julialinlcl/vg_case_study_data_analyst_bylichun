@@ -901,3 +901,623 @@ select
 [0m21:14:14.092435 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb030fb9b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb01f567b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb030fb8250>]}
 [0m21:14:14.093655 [debug] [MainThread]: Flushing usage events
 [0m21:14:14.712334 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:16:04.004774 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65a9565610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65a9565650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65a9564110>]}
+
+
+============================== 21:16:04.009286 | 5bcca386-8010-4546-98c7-d90f896fcdcc ==============================
+[0m21:16:04.009286 [info ] [MainThread]: Running with dbt=1.10.4
+[0m21:16:04.010720 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/workspaces/vg_case_study_data_analyst/transformation', 'version_check': 'True', 'debug': 'False', 'log_path': '/workspaces/vg_case_study_data_analyst/transformation/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt compile', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:16:04.276729 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5bcca386-8010-4546-98c7-d90f896fcdcc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65a55bd690>]}
+[0m21:16:04.354973 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5bcca386-8010-4546-98c7-d90f896fcdcc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65ac1b52d0>]}
+[0m21:16:04.358301 [info ] [MainThread]: Registered adapter: duckdb=1.9.4
+[0m21:16:04.521188 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m21:16:06.747738 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:16:06.749168 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:16:06.759684 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.vg_casestudy.main
+- models.vg_casestudy.marts
+- models.vg_casestudy.reporting
+[0m21:16:06.846567 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5bcca386-8010-4546-98c7-d90f896fcdcc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65a53275d0>]}
+[0m21:16:07.134335 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/vg_case_study_data_analyst/transformation/target/manifest.json
+[0m21:16:07.140990 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/vg_case_study_data_analyst/transformation/target/semantic_manifest.json
+[0m21:16:07.182159 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5bcca386-8010-4546-98c7-d90f896fcdcc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65a5e9b6d0>]}
+[0m21:16:07.183310 [info ] [MainThread]: Found 11 models, 1 analysis, 2 seeds, 71 data tests, 5 sources, 709 macros
+[0m21:16:07.184230 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5bcca386-8010-4546-98c7-d90f896fcdcc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65aa59f850>]}
+[0m21:16:07.189801 [info ] [MainThread]: 
+[0m21:16:07.191412 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:16:07.192883 [info ] [MainThread]: 
+[0m21:16:07.194480 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m21:16:07.206747 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_casestudy_intermediate'
+[0m21:16:07.266273 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_intermediate"
+[0m21:16:07.267551 [debug] [ThreadPool]: On list_casestudy_intermediate: BEGIN
+[0m21:16:07.268854 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:16:07.311865 [debug] [ThreadPool]: SQL status: OK in 0.043 seconds
+[0m21:16:07.313694 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_intermediate"
+[0m21:16:07.315339 [debug] [ThreadPool]: On list_casestudy_intermediate: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "connection_name": "list_casestudy_intermediate"} */
+select
+      'casestudy' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'intermediate'
+    and lower(table_catalog) = 'casestudy'
+  
+[0m21:16:07.335830 [debug] [ThreadPool]: SQL status: OK in 0.019 seconds
+[0m21:16:07.338975 [debug] [ThreadPool]: On list_casestudy_intermediate: ROLLBACK
+[0m21:16:07.341140 [debug] [ThreadPool]: Failed to rollback 'list_casestudy_intermediate'
+[0m21:16:07.342570 [debug] [ThreadPool]: On list_casestudy_intermediate: Close
+[0m21:16:07.344502 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_casestudy_intermediate, now list_casestudy_raw)
+[0m21:16:07.350631 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_raw"
+[0m21:16:07.352236 [debug] [ThreadPool]: On list_casestudy_raw: BEGIN
+[0m21:16:07.353727 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:16:07.357065 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m21:16:07.358574 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_raw"
+[0m21:16:07.360070 [debug] [ThreadPool]: On list_casestudy_raw: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "connection_name": "list_casestudy_raw"} */
+select
+      'casestudy' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'raw'
+    and lower(table_catalog) = 'casestudy'
+  
+[0m21:16:07.367574 [debug] [ThreadPool]: SQL status: OK in 0.006 seconds
+[0m21:16:07.370816 [debug] [ThreadPool]: On list_casestudy_raw: ROLLBACK
+[0m21:16:07.372592 [debug] [ThreadPool]: Failed to rollback 'list_casestudy_raw'
+[0m21:16:07.373970 [debug] [ThreadPool]: On list_casestudy_raw: Close
+[0m21:16:07.375826 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_casestudy_raw, now list_casestudy_staging)
+[0m21:16:07.381654 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_staging"
+[0m21:16:07.383434 [debug] [ThreadPool]: On list_casestudy_staging: BEGIN
+[0m21:16:07.384829 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:16:07.386718 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m21:16:07.388141 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_staging"
+[0m21:16:07.389426 [debug] [ThreadPool]: On list_casestudy_staging: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "connection_name": "list_casestudy_staging"} */
+select
+      'casestudy' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'staging'
+    and lower(table_catalog) = 'casestudy'
+  
+[0m21:16:07.395069 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m21:16:07.397572 [debug] [ThreadPool]: On list_casestudy_staging: ROLLBACK
+[0m21:16:07.398918 [debug] [ThreadPool]: Failed to rollback 'list_casestudy_staging'
+[0m21:16:07.400069 [debug] [ThreadPool]: On list_casestudy_staging: Close
+[0m21:16:07.403321 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5bcca386-8010-4546-98c7-d90f896fcdcc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65a5328110>]}
+[0m21:16:07.408892 [debug] [Thread-1 (]: Began running node model.vg_casestudy.stg_raw_staging__accounts
+[0m21:16:07.410438 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.vg_casestudy.stg_raw_staging__accounts'
+[0m21:16:07.411860 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.stg_raw_staging__accounts
+[0m21:16:07.424868 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.stg_raw_staging__accounts"
+[0m21:16:07.433235 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.stg_raw_staging__accounts
+[0m21:16:07.434647 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.stg_raw_staging__accounts
+[0m21:16:07.435702 [debug] [Thread-1 (]: Began running node model.vg_casestudy.stg_raw_staging__customers
+[0m21:16:07.437267 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vg_casestudy.stg_raw_staging__accounts, now model.vg_casestudy.stg_raw_staging__customers)
+[0m21:16:07.438168 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.stg_raw_staging__customers
+[0m21:16:07.443106 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.stg_raw_staging__customers"
+[0m21:16:07.450740 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.stg_raw_staging__customers
+[0m21:16:07.452161 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.stg_raw_staging__customers
+[0m21:16:07.453107 [debug] [Thread-1 (]: Began running node model.vg_casestudy.stg_raw_staging__fx_rates
+[0m21:16:07.454545 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vg_casestudy.stg_raw_staging__customers, now model.vg_casestudy.stg_raw_staging__fx_rates)
+[0m21:16:07.455779 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.stg_raw_staging__fx_rates
+[0m21:16:07.462267 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.stg_raw_staging__fx_rates"
+[0m21:16:07.470185 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.stg_raw_staging__fx_rates
+[0m21:16:07.471718 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.stg_raw_staging__fx_rates
+[0m21:16:07.472702 [debug] [Thread-1 (]: Began running node seed.vg_casestudy.currencies
+[0m21:16:07.474115 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vg_casestudy.stg_raw_staging__fx_rates, now seed.vg_casestudy.currencies)
+[0m21:16:07.474984 [debug] [Thread-1 (]: Began compiling node seed.vg_casestudy.currencies
+[0m21:16:07.478675 [debug] [Thread-1 (]: Began executing node seed.vg_casestudy.currencies
+[0m21:16:07.480196 [debug] [Thread-1 (]: Finished running node seed.vg_casestudy.currencies
+[0m21:16:07.481175 [debug] [Thread-1 (]: Began running node seed.vg_casestudy.dbt_project_evaluator_exceptions
+[0m21:16:07.482376 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.vg_casestudy.currencies, now seed.vg_casestudy.dbt_project_evaluator_exceptions)
+[0m21:16:07.483284 [debug] [Thread-1 (]: Began compiling node seed.vg_casestudy.dbt_project_evaluator_exceptions
+[0m21:16:07.487563 [debug] [Thread-1 (]: Began executing node seed.vg_casestudy.dbt_project_evaluator_exceptions
+[0m21:16:07.489183 [debug] [Thread-1 (]: Finished running node seed.vg_casestudy.dbt_project_evaluator_exceptions
+[0m21:16:07.490397 [debug] [Thread-1 (]: Began running node model.vg_casestudy.stg_staging_intermediate__accounts
+[0m21:16:07.491751 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.vg_casestudy.dbt_project_evaluator_exceptions, now model.vg_casestudy.stg_staging_intermediate__accounts)
+[0m21:16:07.492897 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.stg_staging_intermediate__accounts
+[0m21:16:07.497674 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.stg_staging_intermediate__accounts"
+[0m21:16:07.507375 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.stg_staging_intermediate__accounts
+[0m21:16:07.508886 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.stg_staging_intermediate__accounts
+[0m21:16:07.510040 [debug] [Thread-1 (]: Began running node test.vg_casestudy.accepted_values_stg_raw_staging__accounts_account_type__savings__current.8db4e271bb
+[0m21:16:07.511249 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vg_casestudy.stg_staging_intermediate__accounts, now test.vg_casestudy.accepted_values_stg_raw_staging__accounts_account_type__savings__current.8db4e271bb)
+[0m21:16:07.512135 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.accepted_values_stg_raw_staging__accounts_account_type__savings__current.8db4e271bb
+[0m21:16:07.528176 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.accepted_values_stg_raw_staging__accounts_account_type__savings__current.8db4e271bb"
+[0m21:16:07.541376 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.accepted_values_stg_raw_staging__accounts_account_type__savings__current.8db4e271bb
+[0m21:16:07.542984 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.accepted_values_stg_raw_staging__accounts_account_type__savings__current.8db4e271bb
+[0m21:16:07.544081 [debug] [Thread-1 (]: Began running node test.vg_casestudy.date_is_past_stg_raw_staging__accounts_account_opening_date.b05801e56a
+[0m21:16:07.545207 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.accepted_values_stg_raw_staging__accounts_account_type__savings__current.8db4e271bb, now test.vg_casestudy.date_is_past_stg_raw_staging__accounts_account_opening_date.b05801e56a)
+[0m21:16:07.546297 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.date_is_past_stg_raw_staging__accounts_account_opening_date.b05801e56a
+[0m21:16:07.554780 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.date_is_past_stg_raw_staging__accounts_account_opening_date.b05801e56a"
+[0m21:16:07.562760 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.date_is_past_stg_raw_staging__accounts_account_opening_date.b05801e56a
+[0m21:16:07.564567 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.date_is_past_stg_raw_staging__accounts_account_opening_date.b05801e56a
+[0m21:16:07.565539 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_raw_staging__accounts_account_id.c6fceee87c
+[0m21:16:07.566553 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.date_is_past_stg_raw_staging__accounts_account_opening_date.b05801e56a, now test.vg_casestudy.not_null_stg_raw_staging__accounts_account_id.c6fceee87c)
+[0m21:16:07.567441 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_raw_staging__accounts_account_id.c6fceee87c
+[0m21:16:07.577567 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_raw_staging__accounts_account_id.c6fceee87c"
+[0m21:16:07.587625 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_raw_staging__accounts_account_id.c6fceee87c
+[0m21:16:07.588971 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_raw_staging__accounts_account_id.c6fceee87c
+[0m21:16:07.589892 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_raw_staging__accounts_account_type.298c80ded4
+[0m21:16:07.590796 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_raw_staging__accounts_account_id.c6fceee87c, now test.vg_casestudy.not_null_stg_raw_staging__accounts_account_type.298c80ded4)
+[0m21:16:07.591626 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_raw_staging__accounts_account_type.298c80ded4
+[0m21:16:07.597534 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_raw_staging__accounts_account_type.298c80ded4"
+[0m21:16:07.606529 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_raw_staging__accounts_account_type.298c80ded4
+[0m21:16:07.607959 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_raw_staging__accounts_account_type.298c80ded4
+[0m21:16:07.608974 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_raw_staging__accounts_customer_id.99ecced993
+[0m21:16:07.609946 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_raw_staging__accounts_account_type.298c80ded4, now test.vg_casestudy.not_null_stg_raw_staging__accounts_customer_id.99ecced993)
+[0m21:16:07.611182 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_raw_staging__accounts_customer_id.99ecced993
+[0m21:16:07.616897 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_raw_staging__accounts_customer_id.99ecced993"
+[0m21:16:07.625200 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_raw_staging__accounts_customer_id.99ecced993
+[0m21:16:07.627439 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_raw_staging__accounts_customer_id.99ecced993
+[0m21:16:07.628450 [debug] [Thread-1 (]: Began running node test.vg_casestudy.unique_stg_raw_staging__accounts_account_id.cfe13a9c67
+[0m21:16:07.629698 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_raw_staging__accounts_customer_id.99ecced993, now test.vg_casestudy.unique_stg_raw_staging__accounts_account_id.cfe13a9c67)
+[0m21:16:07.630625 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.unique_stg_raw_staging__accounts_account_id.cfe13a9c67
+[0m21:16:07.638154 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.unique_stg_raw_staging__accounts_account_id.cfe13a9c67"
+[0m21:16:07.647791 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.unique_stg_raw_staging__accounts_account_id.cfe13a9c67
+[0m21:16:07.649158 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.unique_stg_raw_staging__accounts_account_id.cfe13a9c67
+[0m21:16:07.650104 [debug] [Thread-1 (]: Began running node model.vg_casestudy.stg_raw_staging__loans
+[0m21:16:07.651040 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.unique_stg_raw_staging__accounts_account_id.cfe13a9c67, now model.vg_casestudy.stg_raw_staging__loans)
+[0m21:16:07.651868 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.stg_raw_staging__loans
+[0m21:16:07.659013 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.stg_raw_staging__loans"
+[0m21:16:07.667162 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.stg_raw_staging__loans
+[0m21:16:07.668481 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.stg_raw_staging__loans
+[0m21:16:07.669430 [debug] [Thread-1 (]: Began running node model.vg_casestudy.stg_staging_intermediate__customers
+[0m21:16:07.670946 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vg_casestudy.stg_raw_staging__loans, now model.vg_casestudy.stg_staging_intermediate__customers)
+[0m21:16:07.671842 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.stg_staging_intermediate__customers
+[0m21:16:07.679368 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.stg_staging_intermediate__customers"
+[0m21:16:07.690830 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.stg_staging_intermediate__customers
+[0m21:16:07.692951 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.stg_staging_intermediate__customers
+[0m21:16:07.694524 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_raw_staging__customers_age.402d2aacc9
+[0m21:16:07.695735 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vg_casestudy.stg_staging_intermediate__customers, now test.vg_casestudy.not_null_stg_raw_staging__customers_age.402d2aacc9)
+[0m21:16:07.697109 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_raw_staging__customers_age.402d2aacc9
+[0m21:16:07.704930 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_raw_staging__customers_age.402d2aacc9"
+[0m21:16:07.715274 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_raw_staging__customers_age.402d2aacc9
+[0m21:16:07.717603 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_raw_staging__customers_age.402d2aacc9
+[0m21:16:07.718786 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_raw_staging__customers_branch_id.96cc924db7
+[0m21:16:07.720362 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_raw_staging__customers_age.402d2aacc9, now test.vg_casestudy.not_null_stg_raw_staging__customers_branch_id.96cc924db7)
+[0m21:16:07.721908 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_raw_staging__customers_branch_id.96cc924db7
+[0m21:16:07.728379 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_raw_staging__customers_branch_id.96cc924db7"
+[0m21:16:07.741810 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_raw_staging__customers_branch_id.96cc924db7
+[0m21:16:07.743455 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_raw_staging__customers_branch_id.96cc924db7
+[0m21:16:07.744474 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_raw_staging__customers_customer_id.d27d30a04a
+[0m21:16:07.745784 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_raw_staging__customers_branch_id.96cc924db7, now test.vg_casestudy.not_null_stg_raw_staging__customers_customer_id.d27d30a04a)
+[0m21:16:07.747156 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_raw_staging__customers_customer_id.d27d30a04a
+[0m21:16:07.753454 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_raw_staging__customers_customer_id.d27d30a04a"
+[0m21:16:07.763436 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_raw_staging__customers_customer_id.d27d30a04a
+[0m21:16:07.764915 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_raw_staging__customers_customer_id.d27d30a04a
+[0m21:16:07.766050 [debug] [Thread-1 (]: Began running node test.vg_casestudy.numeric_range_stg_raw_staging__customers_age__200__18.2b9231d3a8
+[0m21:16:07.767691 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_raw_staging__customers_customer_id.d27d30a04a, now test.vg_casestudy.numeric_range_stg_raw_staging__customers_age__200__18.2b9231d3a8)
+[0m21:16:07.769150 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.numeric_range_stg_raw_staging__customers_age__200__18.2b9231d3a8
+[0m21:16:07.778790 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.numeric_range_stg_raw_staging__customers_age__200__18.2b9231d3a8"
+[0m21:16:07.789759 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.numeric_range_stg_raw_staging__customers_age__200__18.2b9231d3a8
+[0m21:16:07.791872 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.numeric_range_stg_raw_staging__customers_age__200__18.2b9231d3a8
+[0m21:16:07.793652 [debug] [Thread-1 (]: Began running node test.vg_casestudy.relationships_stg_raw_staging__accounts_customer_id__customer_id__ref_stg_raw_staging__customers_.87454c2c4c
+[0m21:16:07.794990 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.numeric_range_stg_raw_staging__customers_age__200__18.2b9231d3a8, now test.vg_casestudy.relationships_stg_raw_staging__accounts_customer_id__customer_id__ref_stg_raw_staging__customers_.87454c2c4c)
+[0m21:16:07.796075 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.relationships_stg_raw_staging__accounts_customer_id__customer_id__ref_stg_raw_staging__customers_.87454c2c4c
+[0m21:16:07.807954 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.relationships_stg_raw_staging__accounts_customer_id__customer_id__ref_stg_raw_staging__customers_.87454c2c4c"
+[0m21:16:07.828849 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.relationships_stg_raw_staging__accounts_customer_id__customer_id__ref_stg_raw_staging__customers_.87454c2c4c
+[0m21:16:07.831057 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.relationships_stg_raw_staging__accounts_customer_id__customer_id__ref_stg_raw_staging__customers_.87454c2c4c
+[0m21:16:07.832842 [debug] [Thread-1 (]: Began running node test.vg_casestudy.unique_stg_raw_staging__customers_customer_id.8cd8e9afb0
+[0m21:16:07.834744 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.relationships_stg_raw_staging__accounts_customer_id__customer_id__ref_stg_raw_staging__customers_.87454c2c4c, now test.vg_casestudy.unique_stg_raw_staging__customers_customer_id.8cd8e9afb0)
+[0m21:16:07.836474 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.unique_stg_raw_staging__customers_customer_id.8cd8e9afb0
+[0m21:16:07.843866 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.unique_stg_raw_staging__customers_customer_id.8cd8e9afb0"
+[0m21:16:07.855307 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.unique_stg_raw_staging__customers_customer_id.8cd8e9afb0
+[0m21:16:07.857543 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.unique_stg_raw_staging__customers_customer_id.8cd8e9afb0
+[0m21:16:07.859049 [debug] [Thread-1 (]: Began running node model.vg_casestudy.stg_raw_staging__transactions
+[0m21:16:07.860243 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.unique_stg_raw_staging__customers_customer_id.8cd8e9afb0, now model.vg_casestudy.stg_raw_staging__transactions)
+[0m21:16:07.861948 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.stg_raw_staging__transactions
+[0m21:16:07.867957 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.stg_raw_staging__transactions"
+[0m21:16:07.877089 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.stg_raw_staging__transactions
+[0m21:16:07.878798 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.stg_raw_staging__transactions
+[0m21:16:07.879939 [debug] [Thread-1 (]: Began running node model.vg_casestudy.stg_staging_intermediate__fx_rates
+[0m21:16:07.881260 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vg_casestudy.stg_raw_staging__transactions, now model.vg_casestudy.stg_staging_intermediate__fx_rates)
+[0m21:16:07.882292 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.stg_staging_intermediate__fx_rates
+[0m21:16:07.887228 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.stg_staging_intermediate__fx_rates"
+[0m21:16:07.896549 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.stg_staging_intermediate__fx_rates
+[0m21:16:07.898266 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.stg_staging_intermediate__fx_rates
+[0m21:16:07.899534 [debug] [Thread-1 (]: Began running node test.vg_casestudy.date_is_past_stg_raw_staging__fx_rates_fx_rate_date.7b2c6986f5
+[0m21:16:07.900866 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vg_casestudy.stg_staging_intermediate__fx_rates, now test.vg_casestudy.date_is_past_stg_raw_staging__fx_rates_fx_rate_date.7b2c6986f5)
+[0m21:16:07.901899 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.date_is_past_stg_raw_staging__fx_rates_fx_rate_date.7b2c6986f5
+[0m21:16:07.908015 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.date_is_past_stg_raw_staging__fx_rates_fx_rate_date.7b2c6986f5"
+[0m21:16:07.918147 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.date_is_past_stg_raw_staging__fx_rates_fx_rate_date.7b2c6986f5
+[0m21:16:07.919683 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.date_is_past_stg_raw_staging__fx_rates_fx_rate_date.7b2c6986f5
+[0m21:16:07.920754 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_raw_staging__fx_rates_currency_iso_code.6d09bdebaf
+[0m21:16:07.922145 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.date_is_past_stg_raw_staging__fx_rates_fx_rate_date.7b2c6986f5, now test.vg_casestudy.not_null_stg_raw_staging__fx_rates_currency_iso_code.6d09bdebaf)
+[0m21:16:07.923613 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_raw_staging__fx_rates_currency_iso_code.6d09bdebaf
+[0m21:16:07.931352 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_raw_staging__fx_rates_currency_iso_code.6d09bdebaf"
+[0m21:16:07.941798 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_raw_staging__fx_rates_currency_iso_code.6d09bdebaf
+[0m21:16:07.943316 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_raw_staging__fx_rates_currency_iso_code.6d09bdebaf
+[0m21:16:07.944333 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_raw_staging__fx_rates_fx_rate.1c32f22fac
+[0m21:16:07.945349 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_raw_staging__fx_rates_currency_iso_code.6d09bdebaf, now test.vg_casestudy.not_null_stg_raw_staging__fx_rates_fx_rate.1c32f22fac)
+[0m21:16:07.946418 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_raw_staging__fx_rates_fx_rate.1c32f22fac
+[0m21:16:07.951996 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_raw_staging__fx_rates_fx_rate.1c32f22fac"
+[0m21:16:07.961205 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_raw_staging__fx_rates_fx_rate.1c32f22fac
+[0m21:16:07.962567 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_raw_staging__fx_rates_fx_rate.1c32f22fac
+[0m21:16:07.963516 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_raw_staging__fx_rates_has_date_parsing_error.2f51154c3b
+[0m21:16:07.964449 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_raw_staging__fx_rates_fx_rate.1c32f22fac, now test.vg_casestudy.not_null_stg_raw_staging__fx_rates_has_date_parsing_error.2f51154c3b)
+[0m21:16:07.965282 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_raw_staging__fx_rates_has_date_parsing_error.2f51154c3b
+[0m21:16:07.971520 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_raw_staging__fx_rates_has_date_parsing_error.2f51154c3b"
+[0m21:16:07.980488 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_raw_staging__fx_rates_has_date_parsing_error.2f51154c3b
+[0m21:16:07.981862 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_raw_staging__fx_rates_has_date_parsing_error.2f51154c3b
+[0m21:16:07.982834 [debug] [Thread-1 (]: Began running node test.vg_casestudy.numeric_range_stg_raw_staging__fx_rates_fx_rate__0.ccd53e1d91
+[0m21:16:07.983750 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_raw_staging__fx_rates_has_date_parsing_error.2f51154c3b, now test.vg_casestudy.numeric_range_stg_raw_staging__fx_rates_fx_rate__0.ccd53e1d91)
+[0m21:16:07.984726 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.numeric_range_stg_raw_staging__fx_rates_fx_rate__0.ccd53e1d91
+[0m21:16:07.990338 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.numeric_range_stg_raw_staging__fx_rates_fx_rate__0.ccd53e1d91"
+[0m21:16:07.998927 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.numeric_range_stg_raw_staging__fx_rates_fx_rate__0.ccd53e1d91
+[0m21:16:08.000438 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.numeric_range_stg_raw_staging__fx_rates_fx_rate__0.ccd53e1d91
+[0m21:16:08.002398 [debug] [Thread-1 (]: Began running node test.vg_casestudy.unique_stg_raw_staging__fx_rates_currency_iso_code.b1e6b26758
+[0m21:16:08.003760 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.numeric_range_stg_raw_staging__fx_rates_fx_rate__0.ccd53e1d91, now test.vg_casestudy.unique_stg_raw_staging__fx_rates_currency_iso_code.b1e6b26758)
+[0m21:16:08.004812 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.unique_stg_raw_staging__fx_rates_currency_iso_code.b1e6b26758
+[0m21:16:08.010286 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.unique_stg_raw_staging__fx_rates_currency_iso_code.b1e6b26758"
+[0m21:16:08.019489 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.unique_stg_raw_staging__fx_rates_currency_iso_code.b1e6b26758
+[0m21:16:08.020878 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.unique_stg_raw_staging__fx_rates_currency_iso_code.b1e6b26758
+[0m21:16:08.021896 [debug] [Thread-1 (]: Began running node model.vg_casestudy.stg_staging_intermediate__currencies
+[0m21:16:08.022845 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.unique_stg_raw_staging__fx_rates_currency_iso_code.b1e6b26758, now model.vg_casestudy.stg_staging_intermediate__currencies)
+[0m21:16:08.023750 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.stg_staging_intermediate__currencies
+[0m21:16:08.027900 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.stg_staging_intermediate__currencies"
+[0m21:16:08.035751 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.stg_staging_intermediate__currencies
+[0m21:16:08.037211 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.stg_staging_intermediate__currencies
+[0m21:16:08.038166 [debug] [Thread-1 (]: Began running node test.vg_casestudy.date_is_past_stg_staging_intermediate__accounts_account_opening_date.f0a9449f31
+[0m21:16:08.039393 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vg_casestudy.stg_staging_intermediate__currencies, now test.vg_casestudy.date_is_past_stg_staging_intermediate__accounts_account_opening_date.f0a9449f31)
+[0m21:16:08.040542 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.date_is_past_stg_staging_intermediate__accounts_account_opening_date.f0a9449f31
+[0m21:16:08.046272 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.date_is_past_stg_staging_intermediate__accounts_account_opening_date.f0a9449f31"
+[0m21:16:08.055385 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.date_is_past_stg_staging_intermediate__accounts_account_opening_date.f0a9449f31
+[0m21:16:08.056888 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.date_is_past_stg_staging_intermediate__accounts_account_opening_date.f0a9449f31
+[0m21:16:08.057910 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_staging_intermediate__accounts_account_id.ce9f8bf6f5
+[0m21:16:08.058959 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.date_is_past_stg_staging_intermediate__accounts_account_opening_date.f0a9449f31, now test.vg_casestudy.not_null_stg_staging_intermediate__accounts_account_id.ce9f8bf6f5)
+[0m21:16:08.059838 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_staging_intermediate__accounts_account_id.ce9f8bf6f5
+[0m21:16:08.065626 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_staging_intermediate__accounts_account_id.ce9f8bf6f5"
+[0m21:16:08.074126 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_staging_intermediate__accounts_account_id.ce9f8bf6f5
+[0m21:16:08.075482 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_staging_intermediate__accounts_account_id.ce9f8bf6f5
+[0m21:16:08.076625 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_staging_intermediate__accounts_account_opening_date.14abf76bb5
+[0m21:16:08.077662 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_staging_intermediate__accounts_account_id.ce9f8bf6f5, now test.vg_casestudy.not_null_stg_staging_intermediate__accounts_account_opening_date.14abf76bb5)
+[0m21:16:08.079153 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_staging_intermediate__accounts_account_opening_date.14abf76bb5
+[0m21:16:08.086901 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_staging_intermediate__accounts_account_opening_date.14abf76bb5"
+[0m21:16:08.097256 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_staging_intermediate__accounts_account_opening_date.14abf76bb5
+[0m21:16:08.098590 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_staging_intermediate__accounts_account_opening_date.14abf76bb5
+[0m21:16:08.099618 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_staging_intermediate__accounts_customer_id.2a8ddb333d
+[0m21:16:08.100668 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_staging_intermediate__accounts_account_opening_date.14abf76bb5, now test.vg_casestudy.not_null_stg_staging_intermediate__accounts_customer_id.2a8ddb333d)
+[0m21:16:08.101612 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_staging_intermediate__accounts_customer_id.2a8ddb333d
+[0m21:16:08.106929 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_staging_intermediate__accounts_customer_id.2a8ddb333d"
+[0m21:16:08.116818 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_staging_intermediate__accounts_customer_id.2a8ddb333d
+[0m21:16:08.118136 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_staging_intermediate__accounts_customer_id.2a8ddb333d
+[0m21:16:08.119083 [debug] [Thread-1 (]: Began running node test.vg_casestudy.unique_stg_staging_intermediate__accounts_account_id.b2f9fdea72
+[0m21:16:08.119990 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_staging_intermediate__accounts_customer_id.2a8ddb333d, now test.vg_casestudy.unique_stg_staging_intermediate__accounts_account_id.b2f9fdea72)
+[0m21:16:08.120858 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.unique_stg_staging_intermediate__accounts_account_id.b2f9fdea72
+[0m21:16:08.126010 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.unique_stg_staging_intermediate__accounts_account_id.b2f9fdea72"
+[0m21:16:08.134006 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.unique_stg_staging_intermediate__accounts_account_id.b2f9fdea72
+[0m21:16:08.135315 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.unique_stg_staging_intermediate__accounts_account_id.b2f9fdea72
+[0m21:16:08.136244 [debug] [Thread-1 (]: Began running node model.vg_casestudy.stg_staging_intermediate__loans
+[0m21:16:08.137333 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.unique_stg_staging_intermediate__accounts_account_id.b2f9fdea72, now model.vg_casestudy.stg_staging_intermediate__loans)
+[0m21:16:08.138233 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.stg_staging_intermediate__loans
+[0m21:16:08.142481 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.stg_staging_intermediate__loans"
+[0m21:16:08.150453 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.stg_staging_intermediate__loans
+[0m21:16:08.152076 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.stg_staging_intermediate__loans
+[0m21:16:08.153246 [debug] [Thread-1 (]: Began running node test.vg_casestudy.accepted_values_stg_raw_staging__loans_loan_status__approved__rejected__closed.667473d6c1
+[0m21:16:08.154845 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vg_casestudy.stg_staging_intermediate__loans, now test.vg_casestudy.accepted_values_stg_raw_staging__loans_loan_status__approved__rejected__closed.667473d6c1)
+[0m21:16:08.155908 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.accepted_values_stg_raw_staging__loans_loan_status__approved__rejected__closed.667473d6c1
+[0m21:16:08.163137 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.accepted_values_stg_raw_staging__loans_loan_status__approved__rejected__closed.667473d6c1"
+[0m21:16:08.172791 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.accepted_values_stg_raw_staging__loans_loan_status__approved__rejected__closed.667473d6c1
+[0m21:16:08.174263 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.accepted_values_stg_raw_staging__loans_loan_status__approved__rejected__closed.667473d6c1
+[0m21:16:08.175289 [debug] [Thread-1 (]: Began running node test.vg_casestudy.accepted_values_stg_raw_staging__loans_loan_term__12__24__36__48__60.88d346fe3c
+[0m21:16:08.176270 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.accepted_values_stg_raw_staging__loans_loan_status__approved__rejected__closed.667473d6c1, now test.vg_casestudy.accepted_values_stg_raw_staging__loans_loan_term__12__24__36__48__60.88d346fe3c)
+[0m21:16:08.177240 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.accepted_values_stg_raw_staging__loans_loan_term__12__24__36__48__60.88d346fe3c
+[0m21:16:08.183868 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.accepted_values_stg_raw_staging__loans_loan_term__12__24__36__48__60.88d346fe3c"
+[0m21:16:08.192498 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.accepted_values_stg_raw_staging__loans_loan_term__12__24__36__48__60.88d346fe3c
+[0m21:16:08.193849 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.accepted_values_stg_raw_staging__loans_loan_term__12__24__36__48__60.88d346fe3c
+[0m21:16:08.194777 [debug] [Thread-1 (]: Began running node test.vg_casestudy.accepted_values_stg_raw_staging__loans_loan_type__personal__mortgage__auto.f98f448e68
+[0m21:16:08.195712 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.accepted_values_stg_raw_staging__loans_loan_term__12__24__36__48__60.88d346fe3c, now test.vg_casestudy.accepted_values_stg_raw_staging__loans_loan_type__personal__mortgage__auto.f98f448e68)
+[0m21:16:08.196628 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.accepted_values_stg_raw_staging__loans_loan_type__personal__mortgage__auto.f98f448e68
+[0m21:16:08.204118 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.accepted_values_stg_raw_staging__loans_loan_type__personal__mortgage__auto.f98f448e68"
+[0m21:16:08.212344 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.accepted_values_stg_raw_staging__loans_loan_type__personal__mortgage__auto.f98f448e68
+[0m21:16:08.213565 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.accepted_values_stg_raw_staging__loans_loan_type__personal__mortgage__auto.f98f448e68
+[0m21:16:08.214446 [debug] [Thread-1 (]: Began running node test.vg_casestudy.date_is_past_stg_raw_staging__loans_approval_rejection_date.92db02c0aa
+[0m21:16:08.215399 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.accepted_values_stg_raw_staging__loans_loan_type__personal__mortgage__auto.f98f448e68, now test.vg_casestudy.date_is_past_stg_raw_staging__loans_approval_rejection_date.92db02c0aa)
+[0m21:16:08.216277 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.date_is_past_stg_raw_staging__loans_approval_rejection_date.92db02c0aa
+[0m21:16:08.221677 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.date_is_past_stg_raw_staging__loans_approval_rejection_date.92db02c0aa"
+[0m21:16:08.230614 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.date_is_past_stg_raw_staging__loans_approval_rejection_date.92db02c0aa
+[0m21:16:08.231948 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.date_is_past_stg_raw_staging__loans_approval_rejection_date.92db02c0aa
+[0m21:16:08.233331 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_raw_staging__loans_approval_rejection_date.6c82d62e88
+[0m21:16:08.234951 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.date_is_past_stg_raw_staging__loans_approval_rejection_date.92db02c0aa, now test.vg_casestudy.not_null_stg_raw_staging__loans_approval_rejection_date.6c82d62e88)
+[0m21:16:08.236103 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_raw_staging__loans_approval_rejection_date.6c82d62e88
+[0m21:16:08.243630 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_raw_staging__loans_approval_rejection_date.6c82d62e88"
+[0m21:16:08.253569 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_raw_staging__loans_approval_rejection_date.6c82d62e88
+[0m21:16:08.255119 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_raw_staging__loans_approval_rejection_date.6c82d62e88
+[0m21:16:08.256865 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_raw_staging__loans_interest_rate.af6bbce27a
+[0m21:16:08.258293 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_raw_staging__loans_approval_rejection_date.6c82d62e88, now test.vg_casestudy.not_null_stg_raw_staging__loans_interest_rate.af6bbce27a)
+[0m21:16:08.259765 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_raw_staging__loans_interest_rate.af6bbce27a
+[0m21:16:08.268282 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_raw_staging__loans_interest_rate.af6bbce27a"
+[0m21:16:08.277929 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_raw_staging__loans_interest_rate.af6bbce27a
+[0m21:16:08.279706 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_raw_staging__loans_interest_rate.af6bbce27a
+[0m21:16:08.280816 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_raw_staging__loans_loan_amount.9143c49752
+[0m21:16:08.282336 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_raw_staging__loans_interest_rate.af6bbce27a, now test.vg_casestudy.not_null_stg_raw_staging__loans_loan_amount.9143c49752)
+[0m21:16:08.283302 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_raw_staging__loans_loan_amount.9143c49752
+[0m21:16:08.289283 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_raw_staging__loans_loan_amount.9143c49752"
+[0m21:16:08.300022 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_raw_staging__loans_loan_amount.9143c49752
+[0m21:16:08.302051 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_raw_staging__loans_loan_amount.9143c49752
+[0m21:16:08.303277 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_raw_staging__loans_loan_id.2434a0af3b
+[0m21:16:08.304332 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_raw_staging__loans_loan_amount.9143c49752, now test.vg_casestudy.not_null_stg_raw_staging__loans_loan_id.2434a0af3b)
+[0m21:16:08.305262 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_raw_staging__loans_loan_id.2434a0af3b
+[0m21:16:08.311961 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_raw_staging__loans_loan_id.2434a0af3b"
+[0m21:16:08.322196 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_raw_staging__loans_loan_id.2434a0af3b
+[0m21:16:08.324443 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_raw_staging__loans_loan_id.2434a0af3b
+[0m21:16:08.325883 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_raw_staging__loans_loan_status.f4d3276dbd
+[0m21:16:08.327327 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_raw_staging__loans_loan_id.2434a0af3b, now test.vg_casestudy.not_null_stg_raw_staging__loans_loan_status.f4d3276dbd)
+[0m21:16:08.328693 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_raw_staging__loans_loan_status.f4d3276dbd
+[0m21:16:08.334676 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_raw_staging__loans_loan_status.f4d3276dbd"
+[0m21:16:08.344639 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_raw_staging__loans_loan_status.f4d3276dbd
+[0m21:16:08.346539 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_raw_staging__loans_loan_status.f4d3276dbd
+[0m21:16:08.347699 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_raw_staging__loans_loan_term.53fc5904d6
+[0m21:16:08.348722 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_raw_staging__loans_loan_status.f4d3276dbd, now test.vg_casestudy.not_null_stg_raw_staging__loans_loan_term.53fc5904d6)
+[0m21:16:08.349623 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_raw_staging__loans_loan_term.53fc5904d6
+[0m21:16:08.355697 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_raw_staging__loans_loan_term.53fc5904d6"
+[0m21:16:08.365631 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_raw_staging__loans_loan_term.53fc5904d6
+[0m21:16:08.367122 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_raw_staging__loans_loan_term.53fc5904d6
+[0m21:16:08.368072 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_raw_staging__loans_loan_type.a3d87b38a0
+[0m21:16:08.369220 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_raw_staging__loans_loan_term.53fc5904d6, now test.vg_casestudy.not_null_stg_raw_staging__loans_loan_type.a3d87b38a0)
+[0m21:16:08.370124 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_raw_staging__loans_loan_type.a3d87b38a0
+[0m21:16:08.376932 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_raw_staging__loans_loan_type.a3d87b38a0"
+[0m21:16:08.387233 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_raw_staging__loans_loan_type.a3d87b38a0
+[0m21:16:08.388751 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_raw_staging__loans_loan_type.a3d87b38a0
+[0m21:16:08.389797 [debug] [Thread-1 (]: Began running node test.vg_casestudy.numeric_range_stg_raw_staging__loans_interest_rate__0.c62529af67
+[0m21:16:08.390913 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_raw_staging__loans_loan_type.a3d87b38a0, now test.vg_casestudy.numeric_range_stg_raw_staging__loans_interest_rate__0.c62529af67)
+[0m21:16:08.392547 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.numeric_range_stg_raw_staging__loans_interest_rate__0.c62529af67
+[0m21:16:08.398498 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.numeric_range_stg_raw_staging__loans_interest_rate__0.c62529af67"
+[0m21:16:08.408856 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.numeric_range_stg_raw_staging__loans_interest_rate__0.c62529af67
+[0m21:16:08.410371 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.numeric_range_stg_raw_staging__loans_interest_rate__0.c62529af67
+[0m21:16:08.411435 [debug] [Thread-1 (]: Began running node test.vg_casestudy.numeric_range_stg_raw_staging__loans_loan_amount__0.d8b44433a4
+[0m21:16:08.412498 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.numeric_range_stg_raw_staging__loans_interest_rate__0.c62529af67, now test.vg_casestudy.numeric_range_stg_raw_staging__loans_loan_amount__0.d8b44433a4)
+[0m21:16:08.413506 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.numeric_range_stg_raw_staging__loans_loan_amount__0.d8b44433a4
+[0m21:16:08.420879 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.numeric_range_stg_raw_staging__loans_loan_amount__0.d8b44433a4"
+[0m21:16:08.430801 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.numeric_range_stg_raw_staging__loans_loan_amount__0.d8b44433a4
+[0m21:16:08.432245 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.numeric_range_stg_raw_staging__loans_loan_amount__0.d8b44433a4
+[0m21:16:08.433219 [debug] [Thread-1 (]: Began running node test.vg_casestudy.unique_stg_raw_staging__loans_loan_id.fdf57e988a
+[0m21:16:08.434149 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.numeric_range_stg_raw_staging__loans_loan_amount__0.d8b44433a4, now test.vg_casestudy.unique_stg_raw_staging__loans_loan_id.fdf57e988a)
+[0m21:16:08.435025 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.unique_stg_raw_staging__loans_loan_id.fdf57e988a
+[0m21:16:08.440504 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.unique_stg_raw_staging__loans_loan_id.fdf57e988a"
+[0m21:16:08.448967 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.unique_stg_raw_staging__loans_loan_id.fdf57e988a
+[0m21:16:08.450365 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.unique_stg_raw_staging__loans_loan_id.fdf57e988a
+[0m21:16:08.451315 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_staging_intermediate__customers_branch_id.de895a293b
+[0m21:16:08.452250 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.unique_stg_raw_staging__loans_loan_id.fdf57e988a, now test.vg_casestudy.not_null_stg_staging_intermediate__customers_branch_id.de895a293b)
+[0m21:16:08.453054 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_staging_intermediate__customers_branch_id.de895a293b
+[0m21:16:08.458852 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_staging_intermediate__customers_branch_id.de895a293b"
+[0m21:16:08.467373 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_staging_intermediate__customers_branch_id.de895a293b
+[0m21:16:08.468810 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_staging_intermediate__customers_branch_id.de895a293b
+[0m21:16:08.470124 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_staging_intermediate__customers_customer_id.10f4ae76d7
+[0m21:16:08.471170 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_staging_intermediate__customers_branch_id.de895a293b, now test.vg_casestudy.not_null_stg_staging_intermediate__customers_customer_id.10f4ae76d7)
+[0m21:16:08.472029 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_staging_intermediate__customers_customer_id.10f4ae76d7
+[0m21:16:08.477530 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_staging_intermediate__customers_customer_id.10f4ae76d7"
+[0m21:16:08.487673 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_staging_intermediate__customers_customer_id.10f4ae76d7
+[0m21:16:08.489574 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_staging_intermediate__customers_customer_id.10f4ae76d7
+[0m21:16:08.490769 [debug] [Thread-1 (]: Began running node test.vg_casestudy.relationships_stg_staging_intermediate__accounts_customer_id__customer_id__ref_stg_staging_intermediate__customers_.d3a09ede96
+[0m21:16:08.491864 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_staging_intermediate__customers_customer_id.10f4ae76d7, now test.vg_casestudy.relationships_stg_staging_intermediate__accounts_customer_id__customer_id__ref_stg_staging_intermediate__customers_.d3a09ede96)
+[0m21:16:08.492972 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.relationships_stg_staging_intermediate__accounts_customer_id__customer_id__ref_stg_staging_intermediate__customers_.d3a09ede96
+[0m21:16:08.499858 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.relationships_stg_staging_intermediate__accounts_customer_id__customer_id__ref_stg_staging_intermediate__customers_.d3a09ede96"
+[0m21:16:08.509486 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.relationships_stg_staging_intermediate__accounts_customer_id__customer_id__ref_stg_staging_intermediate__customers_.d3a09ede96
+[0m21:16:08.511014 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.relationships_stg_staging_intermediate__accounts_customer_id__customer_id__ref_stg_staging_intermediate__customers_.d3a09ede96
+[0m21:16:08.512051 [debug] [Thread-1 (]: Began running node test.vg_casestudy.unique_stg_staging_intermediate__customers_customer_id.5bded562dd
+[0m21:16:08.513078 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.relationships_stg_staging_intermediate__accounts_customer_id__customer_id__ref_stg_staging_intermediate__customers_.d3a09ede96, now test.vg_casestudy.unique_stg_staging_intermediate__customers_customer_id.5bded562dd)
+[0m21:16:08.513982 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.unique_stg_staging_intermediate__customers_customer_id.5bded562dd
+[0m21:16:08.519484 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.unique_stg_staging_intermediate__customers_customer_id.5bded562dd"
+[0m21:16:08.527819 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.unique_stg_staging_intermediate__customers_customer_id.5bded562dd
+[0m21:16:08.529198 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.unique_stg_staging_intermediate__customers_customer_id.5bded562dd
+[0m21:16:08.530097 [debug] [Thread-1 (]: Began running node model.vg_casestudy.stg_staging_intermediate__transactions
+[0m21:16:08.531063 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.unique_stg_staging_intermediate__customers_customer_id.5bded562dd, now model.vg_casestudy.stg_staging_intermediate__transactions)
+[0m21:16:08.532200 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.stg_staging_intermediate__transactions
+[0m21:16:08.537022 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.stg_staging_intermediate__transactions"
+[0m21:16:08.545250 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.stg_staging_intermediate__transactions
+[0m21:16:08.546694 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.stg_staging_intermediate__transactions
+[0m21:16:08.548078 [debug] [Thread-1 (]: Began running node test.vg_casestudy.accepted_values_stg_raw_staging__transactions_transaction_type__transfer__deposit__withdrawal.9d791cc0ee
+[0m21:16:08.549504 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vg_casestudy.stg_staging_intermediate__transactions, now test.vg_casestudy.accepted_values_stg_raw_staging__transactions_transaction_type__transfer__deposit__withdrawal.9d791cc0ee)
+[0m21:16:08.550444 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.accepted_values_stg_raw_staging__transactions_transaction_type__transfer__deposit__withdrawal.9d791cc0ee
+[0m21:16:08.558145 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.accepted_values_stg_raw_staging__transactions_transaction_type__transfer__deposit__withdrawal.9d791cc0ee"
+[0m21:16:08.568733 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.accepted_values_stg_raw_staging__transactions_transaction_type__transfer__deposit__withdrawal.9d791cc0ee
+[0m21:16:08.570167 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.accepted_values_stg_raw_staging__transactions_transaction_type__transfer__deposit__withdrawal.9d791cc0ee
+[0m21:16:08.571200 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_raw_staging__transactions_account_id.52f5c093d5
+[0m21:16:08.572166 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.accepted_values_stg_raw_staging__transactions_transaction_type__transfer__deposit__withdrawal.9d791cc0ee, now test.vg_casestudy.not_null_stg_raw_staging__transactions_account_id.52f5c093d5)
+[0m21:16:08.573022 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_raw_staging__transactions_account_id.52f5c093d5
+[0m21:16:08.580628 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_raw_staging__transactions_account_id.52f5c093d5"
+[0m21:16:08.589781 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_raw_staging__transactions_account_id.52f5c093d5
+[0m21:16:08.591085 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_raw_staging__transactions_account_id.52f5c093d5
+[0m21:16:08.591977 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_raw_staging__transactions_transaction_id.ebc02c3793
+[0m21:16:08.592846 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_raw_staging__transactions_account_id.52f5c093d5, now test.vg_casestudy.not_null_stg_raw_staging__transactions_transaction_id.ebc02c3793)
+[0m21:16:08.594020 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_raw_staging__transactions_transaction_id.ebc02c3793
+[0m21:16:08.599499 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_raw_staging__transactions_transaction_id.ebc02c3793"
+[0m21:16:08.608039 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_raw_staging__transactions_transaction_id.ebc02c3793
+[0m21:16:08.609765 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_raw_staging__transactions_transaction_id.ebc02c3793
+[0m21:16:08.610934 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_raw_staging__transactions_transaction_type.29e6a629e0
+[0m21:16:08.611957 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_raw_staging__transactions_transaction_id.ebc02c3793, now test.vg_casestudy.not_null_stg_raw_staging__transactions_transaction_type.29e6a629e0)
+[0m21:16:08.612917 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_raw_staging__transactions_transaction_type.29e6a629e0
+[0m21:16:08.618306 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_raw_staging__transactions_transaction_type.29e6a629e0"
+[0m21:16:08.627929 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_raw_staging__transactions_transaction_type.29e6a629e0
+[0m21:16:08.629451 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_raw_staging__transactions_transaction_type.29e6a629e0
+[0m21:16:08.630474 [debug] [Thread-1 (]: Began running node test.vg_casestudy.relationships_stg_raw_staging__transactions_account_id__account_id__ref_stg_raw_staging__accounts_.e5e3cbe1a6
+[0m21:16:08.631485 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_raw_staging__transactions_transaction_type.29e6a629e0, now test.vg_casestudy.relationships_stg_raw_staging__transactions_account_id__account_id__ref_stg_raw_staging__accounts_.e5e3cbe1a6)
+[0m21:16:08.632392 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.relationships_stg_raw_staging__transactions_account_id__account_id__ref_stg_raw_staging__accounts_.e5e3cbe1a6
+[0m21:16:08.639650 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.relationships_stg_raw_staging__transactions_account_id__account_id__ref_stg_raw_staging__accounts_.e5e3cbe1a6"
+[0m21:16:08.648861 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.relationships_stg_raw_staging__transactions_account_id__account_id__ref_stg_raw_staging__accounts_.e5e3cbe1a6
+[0m21:16:08.650320 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.relationships_stg_raw_staging__transactions_account_id__account_id__ref_stg_raw_staging__accounts_.e5e3cbe1a6
+[0m21:16:08.651330 [debug] [Thread-1 (]: Began running node test.vg_casestudy.unique_stg_raw_staging__transactions_transaction_id.e0f95cb9bb
+[0m21:16:08.652523 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.relationships_stg_raw_staging__transactions_account_id__account_id__ref_stg_raw_staging__accounts_.e5e3cbe1a6, now test.vg_casestudy.unique_stg_raw_staging__transactions_transaction_id.e0f95cb9bb)
+[0m21:16:08.653426 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.unique_stg_raw_staging__transactions_transaction_id.e0f95cb9bb
+[0m21:16:08.659066 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.unique_stg_raw_staging__transactions_transaction_id.e0f95cb9bb"
+[0m21:16:08.667481 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.unique_stg_raw_staging__transactions_transaction_id.e0f95cb9bb
+[0m21:16:08.668820 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.unique_stg_raw_staging__transactions_transaction_id.e0f95cb9bb
+[0m21:16:08.669800 [debug] [Thread-1 (]: Began running node test.vg_casestudy.date_is_past_stg_staging_intermediate__fx_rates_fx_rate_date.6dd6ccf2e2
+[0m21:16:08.670741 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.unique_stg_raw_staging__transactions_transaction_id.e0f95cb9bb, now test.vg_casestudy.date_is_past_stg_staging_intermediate__fx_rates_fx_rate_date.6dd6ccf2e2)
+[0m21:16:08.672102 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.date_is_past_stg_staging_intermediate__fx_rates_fx_rate_date.6dd6ccf2e2
+[0m21:16:08.677938 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.date_is_past_stg_staging_intermediate__fx_rates_fx_rate_date.6dd6ccf2e2"
+[0m21:16:08.687374 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.date_is_past_stg_staging_intermediate__fx_rates_fx_rate_date.6dd6ccf2e2
+[0m21:16:08.689324 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.date_is_past_stg_staging_intermediate__fx_rates_fx_rate_date.6dd6ccf2e2
+[0m21:16:08.690874 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_staging_intermediate__fx_rates_currency_iso_code.95d2907ece
+[0m21:16:08.692496 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.date_is_past_stg_staging_intermediate__fx_rates_fx_rate_date.6dd6ccf2e2, now test.vg_casestudy.not_null_stg_staging_intermediate__fx_rates_currency_iso_code.95d2907ece)
+[0m21:16:08.693967 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_staging_intermediate__fx_rates_currency_iso_code.95d2907ece
+[0m21:16:08.703381 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_staging_intermediate__fx_rates_currency_iso_code.95d2907ece"
+[0m21:16:08.715391 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_staging_intermediate__fx_rates_currency_iso_code.95d2907ece
+[0m21:16:08.717598 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_staging_intermediate__fx_rates_currency_iso_code.95d2907ece
+[0m21:16:08.719299 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_staging_intermediate__fx_rates_fx_rate.bec8509027
+[0m21:16:08.720580 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_staging_intermediate__fx_rates_currency_iso_code.95d2907ece, now test.vg_casestudy.not_null_stg_staging_intermediate__fx_rates_fx_rate.bec8509027)
+[0m21:16:08.722012 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_staging_intermediate__fx_rates_fx_rate.bec8509027
+[0m21:16:08.728212 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_staging_intermediate__fx_rates_fx_rate.bec8509027"
+[0m21:16:08.739201 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_staging_intermediate__fx_rates_fx_rate.bec8509027
+[0m21:16:08.740618 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_staging_intermediate__fx_rates_fx_rate.bec8509027
+[0m21:16:08.741542 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_staging_intermediate__fx_rates_fx_rate_date.0f5280bc57
+[0m21:16:08.742620 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_staging_intermediate__fx_rates_fx_rate.bec8509027, now test.vg_casestudy.not_null_stg_staging_intermediate__fx_rates_fx_rate_date.0f5280bc57)
+[0m21:16:08.743559 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_staging_intermediate__fx_rates_fx_rate_date.0f5280bc57
+[0m21:16:08.750489 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_staging_intermediate__fx_rates_fx_rate_date.0f5280bc57"
+[0m21:16:08.759922 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_staging_intermediate__fx_rates_fx_rate_date.0f5280bc57
+[0m21:16:08.761316 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_staging_intermediate__fx_rates_fx_rate_date.0f5280bc57
+[0m21:16:08.762269 [debug] [Thread-1 (]: Began running node test.vg_casestudy.numeric_range_stg_staging_intermediate__fx_rates_fx_rate__0.2d4a929b3f
+[0m21:16:08.763299 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_staging_intermediate__fx_rates_fx_rate_date.0f5280bc57, now test.vg_casestudy.numeric_range_stg_staging_intermediate__fx_rates_fx_rate__0.2d4a929b3f)
+[0m21:16:08.764394 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.numeric_range_stg_staging_intermediate__fx_rates_fx_rate__0.2d4a929b3f
+[0m21:16:08.771892 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.numeric_range_stg_staging_intermediate__fx_rates_fx_rate__0.2d4a929b3f"
+[0m21:16:08.782306 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.numeric_range_stg_staging_intermediate__fx_rates_fx_rate__0.2d4a929b3f
+[0m21:16:08.783965 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.numeric_range_stg_staging_intermediate__fx_rates_fx_rate__0.2d4a929b3f
+[0m21:16:08.785281 [debug] [Thread-1 (]: Began running node test.vg_casestudy.unique_stg_staging_intermediate__fx_rates_currency_iso_code.a28e4eee53
+[0m21:16:08.786660 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.numeric_range_stg_staging_intermediate__fx_rates_fx_rate__0.2d4a929b3f, now test.vg_casestudy.unique_stg_staging_intermediate__fx_rates_currency_iso_code.a28e4eee53)
+[0m21:16:08.787870 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.unique_stg_staging_intermediate__fx_rates_currency_iso_code.a28e4eee53
+[0m21:16:08.793877 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.unique_stg_staging_intermediate__fx_rates_currency_iso_code.a28e4eee53"
+[0m21:16:08.806213 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.unique_stg_staging_intermediate__fx_rates_currency_iso_code.a28e4eee53
+[0m21:16:08.807667 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.unique_stg_staging_intermediate__fx_rates_currency_iso_code.a28e4eee53
+[0m21:16:08.808670 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_staging_intermediate__currencies_currency_iso_code.f7ebb4618b
+[0m21:16:08.809803 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.unique_stg_staging_intermediate__fx_rates_currency_iso_code.a28e4eee53, now test.vg_casestudy.not_null_stg_staging_intermediate__currencies_currency_iso_code.f7ebb4618b)
+[0m21:16:08.811238 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_staging_intermediate__currencies_currency_iso_code.f7ebb4618b
+[0m21:16:08.817417 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_staging_intermediate__currencies_currency_iso_code.f7ebb4618b"
+[0m21:16:08.827760 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_staging_intermediate__currencies_currency_iso_code.f7ebb4618b
+[0m21:16:08.829202 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_staging_intermediate__currencies_currency_iso_code.f7ebb4618b
+[0m21:16:08.830140 [debug] [Thread-1 (]: Began running node test.vg_casestudy.unique_stg_staging_intermediate__currencies_currency_iso_code.4396247af3
+[0m21:16:08.831200 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_staging_intermediate__currencies_currency_iso_code.f7ebb4618b, now test.vg_casestudy.unique_stg_staging_intermediate__currencies_currency_iso_code.4396247af3)
+[0m21:16:08.832104 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.unique_stg_staging_intermediate__currencies_currency_iso_code.4396247af3
+[0m21:16:08.837520 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.unique_stg_staging_intermediate__currencies_currency_iso_code.4396247af3"
+[0m21:16:08.847363 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.unique_stg_staging_intermediate__currencies_currency_iso_code.4396247af3
+[0m21:16:08.848699 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.unique_stg_staging_intermediate__currencies_currency_iso_code.4396247af3
+[0m21:16:08.849603 [debug] [Thread-1 (]: Began running node analysis.vg_casestudy.sample_loan_data
+[0m21:16:08.850637 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.unique_stg_staging_intermediate__currencies_currency_iso_code.4396247af3, now analysis.vg_casestudy.sample_loan_data)
+[0m21:16:08.851472 [debug] [Thread-1 (]: Began compiling node analysis.vg_casestudy.sample_loan_data
+[0m21:16:08.855483 [debug] [Thread-1 (]: Writing injected SQL for node "analysis.vg_casestudy.sample_loan_data"
+[0m21:16:08.862867 [debug] [Thread-1 (]: Began executing node analysis.vg_casestudy.sample_loan_data
+[0m21:16:08.864274 [debug] [Thread-1 (]: Finished running node analysis.vg_casestudy.sample_loan_data
+[0m21:16:08.865200 [debug] [Thread-1 (]: Began running node test.vg_casestudy.accepted_values_stg_staging_intermediate__loans_loan_status__approved__rejected__closed.3143a4d227
+[0m21:16:08.866226 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly analysis.vg_casestudy.sample_loan_data, now test.vg_casestudy.accepted_values_stg_staging_intermediate__loans_loan_status__approved__rejected__closed.3143a4d227)
+[0m21:16:08.867063 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.accepted_values_stg_staging_intermediate__loans_loan_status__approved__rejected__closed.3143a4d227
+[0m21:16:08.872898 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.accepted_values_stg_staging_intermediate__loans_loan_status__approved__rejected__closed.3143a4d227"
+[0m21:16:08.881670 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.accepted_values_stg_staging_intermediate__loans_loan_status__approved__rejected__closed.3143a4d227
+[0m21:16:08.883021 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.accepted_values_stg_staging_intermediate__loans_loan_status__approved__rejected__closed.3143a4d227
+[0m21:16:08.883976 [debug] [Thread-1 (]: Began running node test.vg_casestudy.accepted_values_stg_staging_intermediate__loans_loan_term__12__24__36__48__60.5ea4cabc39
+[0m21:16:08.885042 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.accepted_values_stg_staging_intermediate__loans_loan_status__approved__rejected__closed.3143a4d227, now test.vg_casestudy.accepted_values_stg_staging_intermediate__loans_loan_term__12__24__36__48__60.5ea4cabc39)
+[0m21:16:08.885969 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.accepted_values_stg_staging_intermediate__loans_loan_term__12__24__36__48__60.5ea4cabc39
+[0m21:16:08.891352 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.accepted_values_stg_staging_intermediate__loans_loan_term__12__24__36__48__60.5ea4cabc39"
+[0m21:16:08.900457 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.accepted_values_stg_staging_intermediate__loans_loan_term__12__24__36__48__60.5ea4cabc39
+[0m21:16:08.901903 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.accepted_values_stg_staging_intermediate__loans_loan_term__12__24__36__48__60.5ea4cabc39
+[0m21:16:08.902972 [debug] [Thread-1 (]: Began running node test.vg_casestudy.date_is_past_stg_staging_intermediate__loans_approval_rejection_date.61c247afe7
+[0m21:16:08.904146 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.accepted_values_stg_staging_intermediate__loans_loan_term__12__24__36__48__60.5ea4cabc39, now test.vg_casestudy.date_is_past_stg_staging_intermediate__loans_approval_rejection_date.61c247afe7)
+[0m21:16:08.905325 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.date_is_past_stg_staging_intermediate__loans_approval_rejection_date.61c247afe7
+[0m21:16:08.910954 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.date_is_past_stg_staging_intermediate__loans_approval_rejection_date.61c247afe7"
+[0m21:16:08.920461 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.date_is_past_stg_staging_intermediate__loans_approval_rejection_date.61c247afe7
+[0m21:16:08.921947 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.date_is_past_stg_staging_intermediate__loans_approval_rejection_date.61c247afe7
+[0m21:16:08.923207 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_staging_intermediate__loans_approval_rejection_date.28f5951b2f
+[0m21:16:08.924357 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.date_is_past_stg_staging_intermediate__loans_approval_rejection_date.61c247afe7, now test.vg_casestudy.not_null_stg_staging_intermediate__loans_approval_rejection_date.28f5951b2f)
+[0m21:16:08.925315 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_staging_intermediate__loans_approval_rejection_date.28f5951b2f
+[0m21:16:08.933355 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_staging_intermediate__loans_approval_rejection_date.28f5951b2f"
+[0m21:16:08.944074 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_staging_intermediate__loans_approval_rejection_date.28f5951b2f
+[0m21:16:08.945804 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_staging_intermediate__loans_approval_rejection_date.28f5951b2f
+[0m21:16:08.947007 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_staging_intermediate__loans_interest_rate.290100bb78
+[0m21:16:08.948084 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_staging_intermediate__loans_approval_rejection_date.28f5951b2f, now test.vg_casestudy.not_null_stg_staging_intermediate__loans_interest_rate.290100bb78)
+[0m21:16:08.949054 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_staging_intermediate__loans_interest_rate.290100bb78
+[0m21:16:08.955577 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_staging_intermediate__loans_interest_rate.290100bb78"
+[0m21:16:08.965311 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_staging_intermediate__loans_interest_rate.290100bb78
+[0m21:16:08.966818 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_staging_intermediate__loans_interest_rate.290100bb78
+[0m21:16:08.968828 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_amount.3aa0f79ca3
+[0m21:16:08.970311 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_staging_intermediate__loans_interest_rate.290100bb78, now test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_amount.3aa0f79ca3)
+[0m21:16:08.971401 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_amount.3aa0f79ca3
+[0m21:16:08.977561 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_amount.3aa0f79ca3"
+[0m21:16:08.987678 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_amount.3aa0f79ca3
+[0m21:16:08.989244 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_amount.3aa0f79ca3
+[0m21:16:08.990521 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_id.bbf464e57e
+[0m21:16:08.991957 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_amount.3aa0f79ca3, now test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_id.bbf464e57e)
+[0m21:16:08.993285 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_id.bbf464e57e
+[0m21:16:09.000552 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_id.bbf464e57e"
+[0m21:16:09.010331 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_id.bbf464e57e
+[0m21:16:09.011932 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_id.bbf464e57e
+[0m21:16:09.013247 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_status.6519e56cae
+[0m21:16:09.015006 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_id.bbf464e57e, now test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_status.6519e56cae)
+[0m21:16:09.016112 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_status.6519e56cae
+[0m21:16:09.022412 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_status.6519e56cae"
+[0m21:16:09.032183 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_status.6519e56cae
+[0m21:16:09.033613 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_status.6519e56cae
+[0m21:16:09.034650 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_term.c98571f396
+[0m21:16:09.036016 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_status.6519e56cae, now test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_term.c98571f396)
+[0m21:16:09.037315 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_term.c98571f396
+[0m21:16:09.044741 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_term.c98571f396"
+[0m21:16:09.054878 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_term.c98571f396
+[0m21:16:09.056568 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_term.c98571f396
+[0m21:16:09.057622 [debug] [Thread-1 (]: Began running node test.vg_casestudy.numeric_range_stg_staging_intermediate__loans_interest_rate__0.049a21d6b9
+[0m21:16:09.059072 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_staging_intermediate__loans_loan_term.c98571f396, now test.vg_casestudy.numeric_range_stg_staging_intermediate__loans_interest_rate__0.049a21d6b9)
+[0m21:16:09.060477 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.numeric_range_stg_staging_intermediate__loans_interest_rate__0.049a21d6b9
+[0m21:16:09.066876 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.numeric_range_stg_staging_intermediate__loans_interest_rate__0.049a21d6b9"
+[0m21:16:09.076532 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.numeric_range_stg_staging_intermediate__loans_interest_rate__0.049a21d6b9
+[0m21:16:09.079578 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.numeric_range_stg_staging_intermediate__loans_interest_rate__0.049a21d6b9
+[0m21:16:09.082378 [debug] [Thread-1 (]: Began running node test.vg_casestudy.numeric_range_stg_staging_intermediate__loans_loan_amount__0.68f9ee0c26
+[0m21:16:09.083753 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.numeric_range_stg_staging_intermediate__loans_interest_rate__0.049a21d6b9, now test.vg_casestudy.numeric_range_stg_staging_intermediate__loans_loan_amount__0.68f9ee0c26)
+[0m21:16:09.084861 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.numeric_range_stg_staging_intermediate__loans_loan_amount__0.68f9ee0c26
+[0m21:16:09.090878 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.numeric_range_stg_staging_intermediate__loans_loan_amount__0.68f9ee0c26"
+[0m21:16:09.103357 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.numeric_range_stg_staging_intermediate__loans_loan_amount__0.68f9ee0c26
+[0m21:16:09.105323 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.numeric_range_stg_staging_intermediate__loans_loan_amount__0.68f9ee0c26
+[0m21:16:09.106728 [debug] [Thread-1 (]: Began running node test.vg_casestudy.unique_stg_staging_intermediate__loans_loan_id.7800e8cbcc
+[0m21:16:09.108139 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.numeric_range_stg_staging_intermediate__loans_loan_amount__0.68f9ee0c26, now test.vg_casestudy.unique_stg_staging_intermediate__loans_loan_id.7800e8cbcc)
+[0m21:16:09.110012 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.unique_stg_staging_intermediate__loans_loan_id.7800e8cbcc
+[0m21:16:09.120611 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.unique_stg_staging_intermediate__loans_loan_id.7800e8cbcc"
+[0m21:16:09.135225 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.unique_stg_staging_intermediate__loans_loan_id.7800e8cbcc
+[0m21:16:09.136980 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.unique_stg_staging_intermediate__loans_loan_id.7800e8cbcc
+[0m21:16:09.138170 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_staging_intermediate__transactions_transaction_amount.8dc65a17fe
+[0m21:16:09.139347 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.unique_stg_staging_intermediate__loans_loan_id.7800e8cbcc, now test.vg_casestudy.not_null_stg_staging_intermediate__transactions_transaction_amount.8dc65a17fe)
+[0m21:16:09.140568 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_staging_intermediate__transactions_transaction_amount.8dc65a17fe
+[0m21:16:09.147701 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_staging_intermediate__transactions_transaction_amount.8dc65a17fe"
+[0m21:16:09.160264 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_staging_intermediate__transactions_transaction_amount.8dc65a17fe
+[0m21:16:09.162158 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_staging_intermediate__transactions_transaction_amount.8dc65a17fe
+[0m21:16:09.164008 [debug] [Thread-1 (]: Began running node test.vg_casestudy.not_null_stg_staging_intermediate__transactions_transaction_id.cb7402fe02
+[0m21:16:09.165469 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_staging_intermediate__transactions_transaction_amount.8dc65a17fe, now test.vg_casestudy.not_null_stg_staging_intermediate__transactions_transaction_id.cb7402fe02)
+[0m21:16:09.166893 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.not_null_stg_staging_intermediate__transactions_transaction_id.cb7402fe02
+[0m21:16:09.173761 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.not_null_stg_staging_intermediate__transactions_transaction_id.cb7402fe02"
+[0m21:16:09.184771 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.not_null_stg_staging_intermediate__transactions_transaction_id.cb7402fe02
+[0m21:16:09.186826 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.not_null_stg_staging_intermediate__transactions_transaction_id.cb7402fe02
+[0m21:16:09.197723 [debug] [Thread-1 (]: Began running node test.vg_casestudy.numeric_range_stg_staging_intermediate__transactions_transaction_amount__0.789e7a4361
+[0m21:16:09.199608 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.not_null_stg_staging_intermediate__transactions_transaction_id.cb7402fe02, now test.vg_casestudy.numeric_range_stg_staging_intermediate__transactions_transaction_amount__0.789e7a4361)
+[0m21:16:09.200970 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.numeric_range_stg_staging_intermediate__transactions_transaction_amount__0.789e7a4361
+[0m21:16:09.207335 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.numeric_range_stg_staging_intermediate__transactions_transaction_amount__0.789e7a4361"
+[0m21:16:09.217882 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.numeric_range_stg_staging_intermediate__transactions_transaction_amount__0.789e7a4361
+[0m21:16:09.220065 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.numeric_range_stg_staging_intermediate__transactions_transaction_amount__0.789e7a4361
+[0m21:16:09.221571 [debug] [Thread-1 (]: Began running node test.vg_casestudy.unique_stg_staging_intermediate__transactions_transaction_id.dbfd7b9b66
+[0m21:16:09.222899 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.vg_casestudy.numeric_range_stg_staging_intermediate__transactions_transaction_amount__0.789e7a4361, now test.vg_casestudy.unique_stg_staging_intermediate__transactions_transaction_id.dbfd7b9b66)
+[0m21:16:09.224300 [debug] [Thread-1 (]: Began compiling node test.vg_casestudy.unique_stg_staging_intermediate__transactions_transaction_id.dbfd7b9b66
+[0m21:16:09.230346 [debug] [Thread-1 (]: Writing injected SQL for node "test.vg_casestudy.unique_stg_staging_intermediate__transactions_transaction_id.dbfd7b9b66"
+[0m21:16:09.240654 [debug] [Thread-1 (]: Began executing node test.vg_casestudy.unique_stg_staging_intermediate__transactions_transaction_id.dbfd7b9b66
+[0m21:16:09.242284 [debug] [Thread-1 (]: Finished running node test.vg_casestudy.unique_stg_staging_intermediate__transactions_transaction_id.dbfd7b9b66
+[0m21:16:09.245076 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:16:09.246725 [debug] [MainThread]: Connection 'list_casestudy_staging' was properly closed.
+[0m21:16:09.247848 [debug] [MainThread]: Connection 'test.vg_casestudy.unique_stg_staging_intermediate__transactions_transaction_id.dbfd7b9b66' was properly closed.
+[0m21:16:09.261414 [debug] [MainThread]: Command end result
+[0m21:16:09.366852 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/vg_case_study_data_analyst/transformation/target/manifest.json
+[0m21:16:09.374402 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/vg_case_study_data_analyst/transformation/target/semantic_manifest.json
+[0m21:16:09.397062 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/vg_case_study_data_analyst/transformation/target/run_results.json
+[0m21:16:09.399003 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 5.474464, "process_in_blocks": "0", "process_kernel_time": 0.430799, "process_mem_max_rss": "168476", "process_out_blocks": "0", "process_user_time": 3.83712}
+[0m21:16:09.400122 [debug] [MainThread]: Command `dbt compile` succeeded at 21:16:09.399979 after 5.48 seconds
+[0m21:16:09.401262 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65a968ab10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65a9913910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65a9557d10>]}
+[0m21:16:09.402334 [debug] [MainThread]: Flushing usage events
+[0m21:16:10.024408 [debug] [MainThread]: An error was encountered while trying to flush usage events
