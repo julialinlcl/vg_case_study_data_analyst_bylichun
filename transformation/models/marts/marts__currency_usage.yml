@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: currency_usage
+    description: "Usage statistics of currencies in transactions"
+    columns:
+      - name: currency_iso_code
+        description: "Currency ISO code"
+      - name: currency_name
+        description: "Currency name"
+      - name: transaction_count
+        description: "Number of transactions"
+      - name: total_transaction_amount
+        description: "Total transaction amount"

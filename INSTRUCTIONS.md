@@ -42,30 +42,30 @@ You'll be working primarily with the **Branch Performance Manager** who needs to
 
 1. [x] Please create a repository and commit this content (or clone and change remote)
 2. [x] Start the devcontainer in the repository
-3. [ ] Set up dbt project structure and configuration
-4. [ ] Set up PowerBI Desktop and configure data ingestion from the database
-5. [ ] Create a PowerBI workspace for your analysis
+3. [x] Set up dbt project structure and configuration
+4. [x] Set up PowerBI Desktop and configure data ingestion from the database
+5. [x] Create a PowerBI workspace for your analysis
 
 **Data Exploration (PowerBI):**
 
-- [ ] Create a comprehensive data exploration dashboard in PowerBI
-- [ ] Ingest the data into PowerBI using your preferred method (CSV export, database connection, etc.)
+- [x] Create a comprehensive data exploration dashboard in PowerBI
+- [x] Ingest the data into PowerBI using your preferred method (CSV export, database connection, etc.)
 
 **Data Engineering (dbt):**
 
 In the `transformations` directory, you'll find a pre-build dbt project that resembles a production repository used for data engineering projects at Varengold. We would like to ask you to create a materialized reporting table that sums up all transactions in EUR per customer, account, branch and transactions_date. The table should be placed in a dedicated schema (like reporting or marts).
 
-- [ ] Implement a dbt model that creates a materialized table in the reporting schema
-- [ ] The model should sum up all transactions in EUR (Euro) per customer, account, branch and date
-- [ ] Use the provided exchange rate table for currency conversion across all dates
-- [ ] Include appropriate dbt tests for data quality validation
-- [ ] Implement proper dbt best practices (staging, intermediate, mart layers if applicable)
+- [x] Implement a dbt model that creates a materialized table in the reporting schema
+- [x] The model should sum up all transactions in EUR (Euro) per customer, account, branch and date
+- [x] Use the provided exchange rate table for currency conversion across all dates
+- [x] Include appropriate dbt tests for data quality validation
+- [x] Implement proper dbt best practices (staging, intermediate, mart layers if applicable)
 
 **Business Intelligence Dashboard (PowerBI):**
 
 You've been asked to create a dashboard for the Branch Performance Manager, who needs to understand how different branches are performing in terms of customer transaction activity. They mentioned wanting to see 'the important numbers' broken down by branch and over time, and specifically asked about EUR equivalents since they deal with multiple currencies. They'll be presenting this to senior management next week.
 
-- [ ] Create a comprehensive Branch Performance Dashboard in PowerBI
+- [x] Create a comprehensive Branch Performance Dashboard in PowerBI
 
 </details>
 
