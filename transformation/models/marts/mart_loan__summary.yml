@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: loans_with_fx_analysis
+    description: >
+      Aggregated loan metrics by age group, gender, loan type, term, status, approval month, and currency.
+      Includes original loan amount, EUR-converted amount, and average interest rate.
+      FX rate is joined using the latest available rate per currency (not filtered by approval date).
+    config:
+      materialized: table
+      schema: marts
+    columns:
+      - name: age_group
+        description: "Customer age group bucket (e.g., 18-25, 26-35, etc.)"
+      - name: gender
+        description: "Gender of the customer"
+      - name: loan_type
+        description: "Type of the loan"
+      - name: loan_term
+        description: "Loan term in months"
+      - name: loan_status
+        description: "Status of the loan (approved, rejected, closed)"
+      - name: approval_month
+        description: "Month when the loan was approved or rejected"
+      - name: currency_iso_code
+        description: "Original currency of the loan transaction"
+      - name: loan_count
+        description: "Number of loans in the group"
+      - name: avg_interest_rate
+        description: "Average interest rate for the group"
+      - name: total_loan_amount_original
+        description: "Sum of original loan amounts in the original currency"
+      - name: total_loan_amount_eur
+        description: "Sum of loan amounts converted to EUR using the latest available FX rate"

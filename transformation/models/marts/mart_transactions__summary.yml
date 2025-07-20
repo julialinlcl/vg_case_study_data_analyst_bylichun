@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: fct_transactions_summary
+    description: >
+      Transaction summary fact table with age group, gender, transaction type, and currency conversion to EUR.
+    columns:
+      - name: age_group
+        description: "Customer age group bucket"
+      - name: gender
+        description: "Customer gender"
+      - name: transaction_type
+        description: "Type of transaction"
+      - name: currency_iso_code
+        description: "Original currency of the transaction"
+      - name: transaction_month
+        description: "Month of the transaction"
+      - name: transaction_count
+        description: "Number of transactions"
+        tests:
+          - not_null
+      - name: total_transaction_amount_eur
+        description: "Total transaction amount converted to EUR"

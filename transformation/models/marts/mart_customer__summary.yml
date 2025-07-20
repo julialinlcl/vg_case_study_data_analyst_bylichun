@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: mart_customer_summary
+    description: Customer summary by age group, gender, account type, loan type, transaction type, and transaction/approval month for management overview
+    config:
+      materialized: table
+      schema: mart
+    columns:
+      - name: age_group
+        data_type: varchar
+        description: Customer age group (e.g., 18-25, 26-35)
+      - name: gender
+        data_type: varchar
+        description: Gender of the customer
+      - name: account_type
+        data_type: varchar
+        description: Type of account held by the customer
+      - name: loan_type
+        data_type: varchar
+        description: Type of loan held by the customer
+      - name: approval_month
+        data_type: date
+        description: Month of loan approval
+      - name: transaction_type
+        data_type: varchar
+        description: Type of transaction performed by the customer
+      - name: transaction_month
+        data_type: date
+        description: Month of transaction performed by the customer
+      - name: customer_count
+        data_type: integer
+        description: Number of unique customers in the group

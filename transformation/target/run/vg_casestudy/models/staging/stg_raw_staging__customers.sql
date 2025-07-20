@@ -11,7 +11,8 @@ renamed as (
         trim(firstname) as firstname,
         trim(lastname) as lastname,
         Age as age,
-        branch_id
+        branch_id,
+        Gender as gender
     from source
 )
 

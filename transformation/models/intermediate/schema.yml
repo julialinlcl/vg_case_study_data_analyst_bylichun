@@ -62,7 +62,7 @@ models:
         description: "Customer's age"
         tests:
           - not_null
-          - accepted_range:
+          - dbt_utils.accepted_range:
               min_value: 0
               inclusive: true
       - name : branch_id
@@ -70,6 +70,12 @@ models:
         description: "Branch ID where the customer is associated"
         tests:
           - not_null
+      - name: gender
+        data_type: varchar
+        description: "Gender of the customer"
+        tests:
+          - not_null
+      
 
   - name: stg_staging_intermediate__fx_rates
     description: "Cleaned FX rates with proper number and date formats"
