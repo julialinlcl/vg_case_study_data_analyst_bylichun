@@ -71,12 +71,12 @@ You've been asked to create a dashboard for the Branch Performance Manager, who 
 
 **Submission:**
 
-- [ ] Please send us a link to your repository with complete dbt project
-- [ ] Include PowerBI files (.pbix) and publish to PowerBI service if possible
-- [ ] Provide screenshots of key dashboard pages in your repository
-- [ ] Include dbt documentation output (docs generate)
-- [ ] Include a brief summary of your key findings and recommendations
-- [ ] Document your chosen data ingestion method and rationale
+- [X] Please send us a link to your repository with complete dbt project
+- [x] Include PowerBI files (.pbix) and publish to PowerBI service if possible
+- [x] Provide screenshots of key dashboard pages in your repository
+- [x] Include dbt documentation output (docs generate)
+- [x] Include a brief summary of your key findings and recommendations
+- [x] Document your chosen data ingestion method and rationale
 
 
 ### Evaluation Criteria:
