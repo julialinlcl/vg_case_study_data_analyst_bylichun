@@ -92,6 +92,49 @@ Each section includes visual references and actionable insights.
 - **Transaction_Amount_By_Age_and_Gender**  <img src="screenshots/Transaction_Amount_By_Age_and_Gender.png">
 - **Transaction_Amount_By_Time_and_Type**  <img src="screenshots/Transaction_Amount_By_Time_and_Typepng">
 
+# 📊 Branch Performance Summary
+
+## 🔑 Key Insights
+
+### 📌 Loan Activity (2020–2022)
+- **Total Loan Amount (EUR)**: €137,975,798  
+- **Total Loan Count**: 18,946  
+- **Data Period**: January 2020 to December 2022  
+- **Number of Branches**: 99  
+
+### 📌 Transaction Activity (2025)
+- **Total Transaction Amount (EUR)**: €81,909,127  
+- **Total Transaction Count**: 56,088  
+- **Data Period**: January 2025 to March 2025  
+- **Number of Branches**: 99  
+
+### 📌 Observations
+- In just 3 months of 2025, transaction volume has already reached **59% of the total loan volume over 3 years**.
+- All branches are represented in the transaction data, indicating full coverage.
+- A significant portion of loans are associated with the `Other` gender and `60+` age group, which may warrant further risk or demographic analysis.
+
+---
+
+## 💡 Business Recommendations
+
+1. **Enhance Transaction Forecasting Models**  
+   Transaction activity is growing rapidly. Consider building monthly forecasting models to anticipate cash flow and customer engagement.
+
+2. **Focus on High-Performing Branches**  
+   Identify the top 10 branches by transaction volume and analyze their success factors to replicate best practices across the network.
+
+3. **Segmented Marketing by Age and Gender**  
+   Use `age_group` and `gender` to tailor financial products and campaigns to specific customer segments.
+
+4. **Monitor High-Risk Demographics**  
+   If the `Other` gender or `60+` age group dominates loan activity, conduct risk assessments and adjust credit policies accordingly.
+
+### 📷 Example Visuals
+
+- **Transaction_And_Loan**  <img src="screenshots/Transaction_And_Loan.png">
+- **Transaction_And_Loan_By_Branch.png**  <img src="screenshots/Transaction_And_Loan_By_Branch.png">
+- **Loan_vs_Transaction_by_Age.png**  <img src="screenshots/Loan_vs_Transaction_by_Age.png">
+
 ---
 
 
