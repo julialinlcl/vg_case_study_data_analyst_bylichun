@@ -1,4 +1,13 @@
-with latest_fx as (
+
+  
+    
+    
+
+    create  table
+      "casestudy"."mart"."mart_branch_performance__summary__dbt_tmp"
+  
+    as (
+      with latest_fx as (
     select *
     from "casestudy"."intermediate"."stg_staging_intermediate__fx_rates"
     qualify row_number() over (
@@ -7,100 +16,76 @@ with latest_fx as (
     ) = 1
 ),
 
+-- LOAN DATA TO EUR
 loans_with_fx as (
     select
-        l.loan_id,
-        l.loan_type,
-        l.loan_status,
-        date_trunc('month', l.approval_rejection_date) as month,
-        l.loan_amount,
-        l.loan_term,
-        l.interest_rate,
-        c.gender,
+        l.customer_id,
         c.branch_id,
-        case
-            when c.age between 18 and 25 then '18-25'
-            when c.age between 26 and 35 then '26-35'
-            when c.age between 36 and 45 then '36-45'
-            when c.age between 46 and 60 then '46-60'
-            else '60+'
-        end as age_group,
+        date_trunc('month', l.approval_rejection_date) as month,
+        l.loan_status,
+        l.loan_amount,
+        l.currency_iso_code,
         fx.fx_rate,
         l.loan_amount / fx.fx_rate as loan_amount_eur
     from "casestudy"."intermediate"."stg_staging_intermediate__loans" l
     join "casestudy"."intermediate"."stg_staging_intermediate__customers" c
         on l.customer_id = c.customer_id
     left join latest_fx fx
-        on fx.currency_iso_code = 'EUR'  -- 假設所有貸款為 EUR，或你可改為實際幣別欄位
+        on fx.currency_iso_code = l.currency_iso_code
     where l.loan_status = 'approved'
 ),
 
+-- TRANSACTION DATA TO EUR
 transactions_with_fx as (
     select
-        t.transaction_id,
-        t.transaction_type,
+        c.branch_id,
         date_trunc('month', t.transaction_date) as month,
         t.transaction_amount,
-        t.transaction_currency as currency_iso_code,
-        c.gender,
-        c.branch_id,
-        case
-            when c.age between 18 and 25 then '18-25'
-            when c.age between 26 and 35 then '26-35'
-            when c.age between 36 and 45 then '36-45'
-            when c.age between 46 and 60 then '46-60'
-            else '60+'
-        end as age_group,
+        t.transaction_currency,
         fx.fx_rate,
-        case
-            when lower(t.transaction_currency) = 'eur' then t.transaction_amount
-            else t.transaction_amount / fx.fx_rate
-        end as transaction_amount_eur
+        t.transaction_amount * fx.fx_rate as transaction_amount_eur
     from "casestudy"."intermediate"."stg_staging_intermediate__transactions" t
     join "casestudy"."intermediate"."stg_staging_intermediate__accounts" a
         on t.account_id = a.account_id
     join "casestudy"."intermediate"."stg_staging_intermediate__customers" c
         on a.customer_id = c.customer_id
     left join latest_fx fx
-        on lower(t.transaction_currency) = lower(fx.currency_iso_code)
+        on t.transaction_currency = fx.currency_iso_code
 ),
 
+-- LOAN SUMMARY
 loan_summary as (
     select
         branch_id,
         month,
-        gender,
-        age_group,
         count(*) as total_loan_count,
-        round(sum(loan_amount_eur), 2) as total_loan_amount_eur
+        sum(loan_amount_eur) as total_loan_amount_eur
     from loans_with_fx
-    group by 1, 2, 3, 4
+    group by branch_id, month
 ),
 
+-- TRANSACTION SUMMARY
 transaction_summary as (
     select
         branch_id,
         month,
-        gender,
-        age_group,
         count(*) as total_transaction_count,
-        round(sum(transaction_amount_eur), 2) as total_transaction_amount_eur
+        sum(transaction_amount_eur) as total_transaction_amount_eur
     from transactions_with_fx
-    group by 1, 2, 3, 4
+    group by branch_id, month
 )
 
+-- MERGE 
 select
     coalesce(l.branch_id, t.branch_id) as branch_id,
     coalesce(l.month, t.month) as month,
-    coalesce(l.gender, t.gender) as gender,
-    coalesce(l.age_group, t.age_group) as age_group,
     coalesce(total_loan_count, 0) as total_loan_count,
     coalesce(total_loan_amount_eur, 0) as total_loan_amount_eur,
     coalesce(total_transaction_count, 0) as total_transaction_count,
     coalesce(total_transaction_amount_eur, 0) as total_transaction_amount_eur
 from loan_summary l
 full outer join transaction_summary t
-    on l.branch_id = t.branch_id
-    and l.month = t.month
-    and l.gender = t.gender
-    and l.age_group = t.age_group
+    on l.branch_id = t.branch_id and l.month = t.month
+    );
+  
+  

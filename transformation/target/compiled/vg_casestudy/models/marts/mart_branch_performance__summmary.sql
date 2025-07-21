@@ -1,13 +1,13 @@
 with latest_fx as (
     select *
-    from {{ ref('stg_staging_intermediate__fx_rates') }}
+    from "casestudy"."intermediate"."stg_staging_intermediate__fx_rates"
     qualify row_number() over (
         partition by currency_iso_code
         order by fx_rate_date desc
     ) = 1
 ),
 
-loans_with_fx as (
+loans_with_currency as (
     select
         l.loan_id,
         l.loan_type,
@@ -16,23 +16,37 @@ loans_with_fx as (
         l.loan_amount,
         l.loan_term,
         l.interest_rate,
+        c.age,
         c.gender,
         c.branch_id,
+        a.account_id,
+        t.transaction_currency as currency_iso_code,
         case
             when c.age between 18 and 25 then '18-25'
             when c.age between 26 and 35 then '26-35'
             when c.age between 36 and 45 then '36-45'
             when c.age between 46 and 60 then '46-60'
             else '60+'
-        end as age_group,
-        fx.fx_rate,
-        l.loan_amount / fx.fx_rate as loan_amount_eur
-    from {{ ref('stg_staging_intermediate__loans') }} l
-    join {{ ref('stg_staging_intermediate__customers') }} c
+        end as age_group
+    from "casestudy"."intermediate"."stg_staging_intermediate__loans" l
+    join "casestudy"."intermediate"."stg_staging_intermediate__customers" c
         on l.customer_id = c.customer_id
-    left join latest_fx fx
-        on fx.currency_iso_code = 'EUR'  -- 假設所有貸款為 EUR，或你可改為實際幣別欄位
+    join "casestudy"."intermediate"."stg_staging_intermediate__accounts" a
+        on c.customer_id = a.customer_id
+    join "casestudy"."intermediate"."stg_staging_intermediate__transactions" t
+        on a.account_id = t.account_id
     where l.loan_status = 'approved'
+),
+
+loans_with_fx as (
+    select
+        lwc.*,
+        fx.fx_rate,
+        coalesce(lwc.loan_amount / fx.fx_rate, 0) as loan_amount_eur
+    from loans_with_currency lwc
+    left join latest_fx fx
+        on lower(fx.currency_iso_code) = lower(lwc.currency_iso_code)
+
 ),
 
 transactions_with_fx as (
@@ -56,10 +70,10 @@ transactions_with_fx as (
             when lower(t.transaction_currency) = 'eur' then t.transaction_amount
             else t.transaction_amount / fx.fx_rate
         end as transaction_amount_eur
-    from {{ ref('stg_staging_intermediate__transactions') }} t
-    join {{ ref('stg_staging_intermediate__accounts') }} a
+    from "casestudy"."intermediate"."stg_staging_intermediate__transactions" t
+    join "casestudy"."intermediate"."stg_staging_intermediate__accounts" a
         on t.account_id = a.account_id
-    join {{ ref('stg_staging_intermediate__customers') }} c
+    join "casestudy"."intermediate"."stg_staging_intermediate__customers" c
         on a.customer_id = c.customer_id
     left join latest_fx fx
         on lower(t.transaction_currency) = lower(fx.currency_iso_code)

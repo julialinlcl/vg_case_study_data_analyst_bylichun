@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: loan_transaction_summary
+    description: >
+      Aggregated summary of approved loans and financial transactions,
+      grouped by branch, month, gender, and age group. Loan and transaction
+      amounts are converted to EUR using the latest available FX rates.
+    columns:
+      - name: branch_id
+        description: Branch identifier
+      - name: month
+        description: Month of loan approval or transaction (truncated to month)
+      - name: gender
+        description: Customer gender
+      - name: age_group
+        description: Customer age group (18–25, 26–35, 36–45, 46–60, 60+)
+      - name: total_loan_count
+        description: Number of approved loans
+      - name: total_loan_amount_eur
+        description: Total approved loan amount converted to EUR
+      - name: total_transaction_count
+        description: Number of transactions
+      - name: total_transaction_amount_eur
+        description: Total transaction amount converted to EUR
