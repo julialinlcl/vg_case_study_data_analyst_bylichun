@@ -9,17 +9,25 @@ models:
     columns:
       - name: branch_id
         description: Branch identifier
+        type: string
       - name: month
         description: Month of loan approval or transaction (truncated to month)
+        type: date
       - name: gender
         description: Customer gender
+        type: string
       - name: age_group
         description: Customer age group (18–25, 26–35, 36–45, 46–60, 60+)
+        type: string
       - name: total_loan_count
         description: Number of approved loans
+        type: integer
       - name: total_loan_amount_eur
         description: Total approved loan amount converted to EUR
+        type: float
       - name: total_transaction_count
         description: Number of transactions
+        type: integer
       - name: total_transaction_amount_eur
         description: Total transaction amount converted to EUR
+        type: float

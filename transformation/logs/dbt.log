@@ -48493,3 +48493,1720 @@ alter table "casestudy"."marts"."mart_transactions__summary__dbt_tmp" rename to 
 [0m11:40:26.673634 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2a543e3850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2a58459310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2a58458dd0>]}
 [0m11:40:26.675335 [debug] [MainThread]: Flushing usage events
 [0m11:40:27.363389 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:29:51.954045 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc1644e2b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc164533a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc164533950>]}
+
+
+============================== 18:29:51.964435 | a7a349ee-e309-4724-9d3b-2998013d19ee ==============================
+[0m18:29:51.964435 [info ] [MainThread]: Running with dbt=1.10.4
+[0m18:29:51.967720 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/workspaces/vg_case_study_data_analyst/transformation', 'debug': 'False', 'warn_error': 'None', 'log_path': '/workspaces/vg_case_study_data_analyst/transformation/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m18:29:52.839108 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a7a349ee-e309-4724-9d3b-2998013d19ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc160503650>]}
+[0m18:29:52.954495 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a7a349ee-e309-4724-9d3b-2998013d19ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc16030ce90>]}
+[0m18:29:52.959237 [info ] [MainThread]: Registered adapter: duckdb=1.9.4
+[0m18:29:53.181416 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m18:29:57.112526 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m18:29:57.114718 [debug] [MainThread]: Partial parsing: updated file: vg_casestudy://models/marts/mart_branch_performance__summmary.yml
+[0m18:29:57.276773 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'loan_transaction_summary' in the 'models' section of file 'models/marts/mart_branch_performance__summmary.yml'
+[0m18:29:57.678712 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.vg_casestudy.reporting
+- models.vg_casestudy.main
+[0m18:29:57.720566 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a7a349ee-e309-4724-9d3b-2998013d19ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc15fea99d0>]}
+[0m18:29:58.018144 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/vg_case_study_data_analyst/transformation/target/manifest.json
+[0m18:29:58.054177 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/vg_case_study_data_analyst/transformation/target/semantic_manifest.json
+[0m18:29:58.157712 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a7a349ee-e309-4724-9d3b-2998013d19ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc160061910>]}
+[0m18:29:58.162634 [info ] [MainThread]: Found 15 models, 1 analysis, 2 seeds, 78 data tests, 5 sources, 709 macros
+[0m18:29:58.166316 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a7a349ee-e309-4724-9d3b-2998013d19ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc1603f6ad0>]}
+[0m18:29:58.183979 [info ] [MainThread]: 
+[0m18:29:58.187012 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:29:58.194980 [info ] [MainThread]: 
+[0m18:29:58.199247 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m18:29:58.228678 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_casestudy'
+[0m18:29:58.398046 [debug] [ThreadPool]: Using duckdb connection "list_casestudy"
+[0m18:29:58.401991 [debug] [ThreadPool]: On list_casestudy: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "connection_name": "list_casestudy"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"casestudy"'
+    
+  
+  
+[0m18:29:58.409075 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:29:58.630209 [debug] [ThreadPool]: SQL status: OK in 0.221 seconds
+[0m18:29:58.634146 [debug] [ThreadPool]: On list_casestudy: Close
+[0m18:29:58.642046 [debug] [ThreadPool]: Using duckdb connection "list_casestudy"
+[0m18:29:58.643987 [debug] [ThreadPool]: On list_casestudy: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "connection_name": "list_casestudy"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"casestudy"'
+    
+  
+  
+[0m18:29:58.646484 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:29:58.651155 [debug] [ThreadPool]: SQL status: OK in 0.005 seconds
+[0m18:29:58.654439 [debug] [ThreadPool]: On list_casestudy: Close
+[0m18:29:58.666577 [debug] [ThreadPool]: Using duckdb connection "list_casestudy"
+[0m18:29:58.668517 [debug] [ThreadPool]: On list_casestudy: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "connection_name": "list_casestudy"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"casestudy"'
+    
+  
+  
+[0m18:29:58.670226 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:29:58.677684 [debug] [ThreadPool]: SQL status: OK in 0.006 seconds
+[0m18:29:58.681711 [debug] [ThreadPool]: On list_casestudy: Close
+[0m18:29:58.684824 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_casestudy, now create_casestudy_staging)
+[0m18:29:58.687230 [debug] [ThreadPool]: Creating schema "database: "casestudy"
+schema: "staging"
+"
+[0m18:29:58.708885 [debug] [ThreadPool]: Using duckdb connection "create_casestudy_staging"
+[0m18:29:58.711980 [debug] [ThreadPool]: On create_casestudy_staging: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "connection_name": "create_casestudy_staging"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='casestudy'
+        and type='sqlite'
+    
+  
+[0m18:29:58.714146 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:29:58.718381 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m18:29:58.727307 [debug] [ThreadPool]: Using duckdb connection "create_casestudy_staging"
+[0m18:29:58.729598 [debug] [ThreadPool]: On create_casestudy_staging: BEGIN
+[0m18:29:58.734616 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m18:29:58.737734 [debug] [ThreadPool]: Using duckdb connection "create_casestudy_staging"
+[0m18:29:58.744002 [debug] [ThreadPool]: On create_casestudy_staging: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "connection_name": "create_casestudy_staging"} */
+
+    
+    
+        create schema if not exists "casestudy"."staging"
+    
+[0m18:29:58.750711 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:29:58.755672 [debug] [ThreadPool]: On create_casestudy_staging: COMMIT
+[0m18:29:58.758696 [debug] [ThreadPool]: Using duckdb connection "create_casestudy_staging"
+[0m18:29:58.761810 [debug] [ThreadPool]: On create_casestudy_staging: COMMIT
+[0m18:29:58.765813 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:29:58.768685 [debug] [ThreadPool]: On create_casestudy_staging: Close
+[0m18:29:58.778718 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_casestudy_staging, now create_casestudy_intermediate)
+[0m18:29:58.782788 [debug] [ThreadPool]: Creating schema "database: "casestudy"
+schema: "intermediate"
+"
+[0m18:29:58.797039 [debug] [ThreadPool]: Using duckdb connection "create_casestudy_intermediate"
+[0m18:29:58.800258 [debug] [ThreadPool]: On create_casestudy_intermediate: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "connection_name": "create_casestudy_intermediate"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='casestudy'
+        and type='sqlite'
+    
+  
+[0m18:29:58.802556 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:29:58.812293 [debug] [ThreadPool]: SQL status: OK in 0.010 seconds
+[0m18:29:58.818846 [debug] [ThreadPool]: Using duckdb connection "create_casestudy_intermediate"
+[0m18:29:58.821739 [debug] [ThreadPool]: On create_casestudy_intermediate: BEGIN
+[0m18:29:58.824459 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:29:58.827232 [debug] [ThreadPool]: Using duckdb connection "create_casestudy_intermediate"
+[0m18:29:58.829625 [debug] [ThreadPool]: On create_casestudy_intermediate: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "connection_name": "create_casestudy_intermediate"} */
+
+    
+    
+        create schema if not exists "casestudy"."intermediate"
+    
+[0m18:29:58.835413 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m18:29:58.839496 [debug] [ThreadPool]: On create_casestudy_intermediate: COMMIT
+[0m18:29:58.842469 [debug] [ThreadPool]: Using duckdb connection "create_casestudy_intermediate"
+[0m18:29:58.845036 [debug] [ThreadPool]: On create_casestudy_intermediate: COMMIT
+[0m18:29:58.848010 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:29:58.851375 [debug] [ThreadPool]: On create_casestudy_intermediate: Close
+[0m18:29:58.854620 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_casestudy_intermediate, now create_casestudy_marts)
+[0m18:29:58.859147 [debug] [ThreadPool]: Creating schema "database: "casestudy"
+schema: "marts"
+"
+[0m18:29:58.867150 [debug] [ThreadPool]: Using duckdb connection "create_casestudy_marts"
+[0m18:29:58.872753 [debug] [ThreadPool]: On create_casestudy_marts: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "connection_name": "create_casestudy_marts"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='casestudy'
+        and type='sqlite'
+    
+  
+[0m18:29:58.882955 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:29:58.890380 [debug] [ThreadPool]: SQL status: OK in 0.007 seconds
+[0m18:29:58.895927 [debug] [ThreadPool]: Using duckdb connection "create_casestudy_marts"
+[0m18:29:58.897890 [debug] [ThreadPool]: On create_casestudy_marts: BEGIN
+[0m18:29:58.900275 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:29:58.901814 [debug] [ThreadPool]: Using duckdb connection "create_casestudy_marts"
+[0m18:29:58.903136 [debug] [ThreadPool]: On create_casestudy_marts: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "connection_name": "create_casestudy_marts"} */
+
+    
+    
+        create schema if not exists "casestudy"."marts"
+    
+[0m18:29:58.907095 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m18:29:58.911363 [debug] [ThreadPool]: On create_casestudy_marts: COMMIT
+[0m18:29:58.912966 [debug] [ThreadPool]: Using duckdb connection "create_casestudy_marts"
+[0m18:29:58.914320 [debug] [ThreadPool]: On create_casestudy_marts: COMMIT
+[0m18:29:58.916388 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:29:58.918100 [debug] [ThreadPool]: On create_casestudy_marts: Close
+[0m18:29:58.926545 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_casestudy_marts, now list_casestudy_staging)
+[0m18:29:58.938497 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_staging"
+[0m18:29:58.940612 [debug] [ThreadPool]: On list_casestudy_staging: BEGIN
+[0m18:29:58.942673 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:29:58.945163 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m18:29:58.946887 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_staging"
+[0m18:29:58.948460 [debug] [ThreadPool]: On list_casestudy_staging: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "connection_name": "list_casestudy_staging"} */
+select
+      'casestudy' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'staging'
+    and lower(table_catalog) = 'casestudy'
+  
+[0m18:29:58.976526 [debug] [ThreadPool]: SQL status: OK in 0.026 seconds
+[0m18:29:58.980034 [debug] [ThreadPool]: On list_casestudy_staging: ROLLBACK
+[0m18:29:58.983752 [debug] [ThreadPool]: Failed to rollback 'list_casestudy_staging'
+[0m18:29:58.985793 [debug] [ThreadPool]: On list_casestudy_staging: Close
+[0m18:29:58.988657 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_casestudy_staging, now list_casestudy_raw)
+[0m18:29:58.997434 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_raw"
+[0m18:29:58.999645 [debug] [ThreadPool]: On list_casestudy_raw: BEGIN
+[0m18:29:59.001239 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:29:59.003402 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m18:29:59.004941 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_raw"
+[0m18:29:59.007401 [debug] [ThreadPool]: On list_casestudy_raw: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "connection_name": "list_casestudy_raw"} */
+select
+      'casestudy' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'raw'
+    and lower(table_catalog) = 'casestudy'
+  
+[0m18:29:59.017067 [debug] [ThreadPool]: SQL status: OK in 0.007 seconds
+[0m18:29:59.021364 [debug] [ThreadPool]: On list_casestudy_raw: ROLLBACK
+[0m18:29:59.023569 [debug] [ThreadPool]: Failed to rollback 'list_casestudy_raw'
+[0m18:29:59.026136 [debug] [ThreadPool]: On list_casestudy_raw: Close
+[0m18:29:59.029062 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_casestudy_raw, now list_casestudy_intermediate)
+[0m18:29:59.036476 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_intermediate"
+[0m18:29:59.038009 [debug] [ThreadPool]: On list_casestudy_intermediate: BEGIN
+[0m18:29:59.040049 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:29:59.042322 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m18:29:59.044096 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_intermediate"
+[0m18:29:59.046200 [debug] [ThreadPool]: On list_casestudy_intermediate: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "connection_name": "list_casestudy_intermediate"} */
+select
+      'casestudy' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'intermediate'
+    and lower(table_catalog) = 'casestudy'
+  
+[0m18:29:59.052956 [debug] [ThreadPool]: SQL status: OK in 0.005 seconds
+[0m18:29:59.056744 [debug] [ThreadPool]: On list_casestudy_intermediate: ROLLBACK
+[0m18:29:59.059790 [debug] [ThreadPool]: Failed to rollback 'list_casestudy_intermediate'
+[0m18:29:59.061468 [debug] [ThreadPool]: On list_casestudy_intermediate: Close
+[0m18:29:59.063532 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_casestudy_intermediate, now list_casestudy_marts)
+[0m18:29:59.069442 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_marts"
+[0m18:29:59.070781 [debug] [ThreadPool]: On list_casestudy_marts: BEGIN
+[0m18:29:59.072001 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:29:59.076190 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m18:29:59.077768 [debug] [ThreadPool]: Using duckdb connection "list_casestudy_marts"
+[0m18:29:59.078970 [debug] [ThreadPool]: On list_casestudy_marts: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "connection_name": "list_casestudy_marts"} */
+select
+      'casestudy' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'marts'
+    and lower(table_catalog) = 'casestudy'
+  
+[0m18:29:59.085135 [debug] [ThreadPool]: SQL status: OK in 0.005 seconds
+[0m18:29:59.088562 [debug] [ThreadPool]: On list_casestudy_marts: ROLLBACK
+[0m18:29:59.091785 [debug] [ThreadPool]: Failed to rollback 'list_casestudy_marts'
+[0m18:29:59.093674 [debug] [ThreadPool]: On list_casestudy_marts: Close
+[0m18:29:59.099042 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a7a349ee-e309-4724-9d3b-2998013d19ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc164592310>]}
+[0m18:29:59.100673 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:29:59.101816 [debug] [MainThread]: On master: BEGIN
+[0m18:29:59.102887 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:29:59.104638 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m18:29:59.106404 [debug] [MainThread]: On master: COMMIT
+[0m18:29:59.107909 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:29:59.109652 [debug] [MainThread]: On master: COMMIT
+[0m18:29:59.111398 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m18:29:59.112650 [debug] [MainThread]: On master: Close
+[0m18:29:59.119194 [debug] [Thread-1 (]: Began running node model.vg_casestudy.stg_raw_staging__accounts
+[0m18:29:59.121888 [info ] [Thread-1 (]: 1 of 15 START sql view model staging.stg_raw_staging__accounts ................. [RUN]
+[0m18:29:59.125080 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_casestudy_marts, now model.vg_casestudy.stg_raw_staging__accounts)
+[0m18:29:59.126946 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.stg_raw_staging__accounts
+[0m18:29:59.151112 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.stg_raw_staging__accounts"
+[0m18:29:59.168193 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.stg_raw_staging__accounts
+[0m18:29:59.224038 [debug] [Thread-1 (]: Writing runtime sql for node "model.vg_casestudy.stg_raw_staging__accounts"
+[0m18:29:59.236767 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__accounts"
+[0m18:29:59.238231 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__accounts: BEGIN
+[0m18:29:59.240640 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:29:59.243081 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:29:59.244813 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__accounts"
+[0m18:29:59.246437 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__accounts: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_raw_staging__accounts"} */
+
+  
+  create view "casestudy"."staging"."stg_raw_staging__accounts__dbt_tmp" as (
+    with source as (
+    select * from "casestudy"."raw"."accounts"
+),
+
+renamed as (
+    select
+        account_id,
+        customer_id,
+        account_type,
+        
+CASE
+    -- First try DD.MM.YYYY format (German format with dots)
+    WHEN REGEXP_MATCHES(account_opening_date, '^\d{1,2}\.\d{1,2}\.\d{4}$') 
+        THEN TRY_CAST(STRPTIME(account_opening_date, '%d.%m.%Y') AS DATE)
+        
+    -- Then try DD/MM/YYYY format (with slashes)
+    WHEN REGEXP_MATCHES(account_opening_date, '^\d{1,2}/\d{1,2}/\d{4}$')
+        AND CAST(SPLIT_PART(account_opening_date, '/', 1) AS INTEGER) <= 31 
+        AND CAST(SPLIT_PART(account_opening_date, '/', 2) AS INTEGER) <= 12 
+        THEN TRY_CAST(STRPTIME(account_opening_date, '%d/%m/%Y') AS DATE)
+        
+    -- Try MM/DD/YYYY format (US format with slashes)
+    WHEN REGEXP_MATCHES(account_opening_date, '^\d{1,2}/\d{1,2}/\d{4}$')
+        AND CAST(SPLIT_PART(account_opening_date, '/', 1) AS INTEGER) <= 12 
+        THEN TRY_CAST(STRPTIME(account_opening_date, '%m/%d/%Y') AS DATE)
+        
+    -- Try YYYY-MM-DD format (ISO format)
+    WHEN REGEXP_MATCHES(account_opening_date, '^\d{4}-\d{1,2}-\d{1,2}$')
+        THEN TRY_CAST(STRPTIME(account_opening_date, '%Y-%m-%d') AS DATE)
+        
+    -- Try generic date parsing as last resort
+    ELSE TRY_CAST(account_opening_date AS DATE)
+END
+ as account_opening_date,
+        account_opening_date as account_opening_date_raw
+    from source
+    where account_type is not null and account_type != '' and account_type != '-'
+),
+
+final as (
+    select
+        account_id,
+        customer_id,
+        account_type,
+        account_opening_date,
+        -- Flag records with date parsing issues
+        CASE WHEN account_opening_date IS NULL AND account_opening_date_raw IS NOT NULL
+             THEN TRUE ELSE FALSE 
+        END as has_date_parsing_error
+    from renamed
+)
+
+select * from final
+  );
+
+[0m18:29:59.252304 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m18:29:59.268836 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__accounts"
+[0m18:29:59.270642 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__accounts: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_raw_staging__accounts"} */
+alter view "casestudy"."staging"."stg_raw_staging__accounts" rename to "stg_raw_staging__accounts__dbt_backup"
+[0m18:29:59.273716 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:29:59.282063 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__accounts"
+[0m18:29:59.283856 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__accounts: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_raw_staging__accounts"} */
+alter view "casestudy"."staging"."stg_raw_staging__accounts__dbt_tmp" rename to "stg_raw_staging__accounts"
+[0m18:29:59.286345 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:29:59.306577 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__accounts: COMMIT
+[0m18:29:59.309335 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__accounts"
+[0m18:29:59.311260 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__accounts: COMMIT
+[0m18:29:59.321043 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m18:29:59.332497 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__accounts"
+[0m18:29:59.334179 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__accounts: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_raw_staging__accounts"} */
+
+      drop view if exists "casestudy"."staging"."stg_raw_staging__accounts__dbt_backup" cascade
+    
+[0m18:29:59.339032 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:29:59.344613 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__accounts: Close
+[0m18:29:59.349066 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a7a349ee-e309-4724-9d3b-2998013d19ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc15febc1d0>]}
+[0m18:29:59.351745 [info ] [Thread-1 (]: 1 of 15 OK created sql view model staging.stg_raw_staging__accounts ............ [[32mOK[0m in 0.22s]
+[0m18:29:59.353789 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.stg_raw_staging__accounts
+[0m18:29:59.355304 [debug] [Thread-1 (]: Began running node model.vg_casestudy.stg_raw_staging__customers
+[0m18:29:59.358311 [info ] [Thread-1 (]: 2 of 15 START sql view model staging.stg_raw_staging__customers ................ [RUN]
+[0m18:29:59.361203 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vg_casestudy.stg_raw_staging__accounts, now model.vg_casestudy.stg_raw_staging__customers)
+[0m18:29:59.363025 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.stg_raw_staging__customers
+[0m18:29:59.372515 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.stg_raw_staging__customers"
+[0m18:29:59.399369 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.stg_raw_staging__customers
+[0m18:29:59.407040 [debug] [Thread-1 (]: Writing runtime sql for node "model.vg_casestudy.stg_raw_staging__customers"
+[0m18:29:59.421122 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__customers"
+[0m18:29:59.422687 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__customers: BEGIN
+[0m18:29:59.425008 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:29:59.429002 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m18:29:59.430761 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__customers"
+[0m18:29:59.432216 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__customers: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_raw_staging__customers"} */
+
+  
+  create view "casestudy"."staging"."stg_raw_staging__customers__dbt_tmp" as (
+    with source as (
+    select * from "casestudy"."raw"."customers"
+),
+
+renamed as (
+    select distinct
+        customer_id,
+        trim(firstname) as firstname,
+        trim(lastname) as lastname,
+        Age as age,
+        branch_id,
+        Gender as gender
+    from source
+)
+
+select * from renamed
+  );
+
+[0m18:29:59.434622 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:29:59.441485 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__customers"
+[0m18:29:59.443777 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__customers: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_raw_staging__customers"} */
+alter view "casestudy"."staging"."stg_raw_staging__customers" rename to "stg_raw_staging__customers__dbt_backup"
+[0m18:29:59.446431 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:29:59.452185 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__customers"
+[0m18:29:59.453618 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__customers: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_raw_staging__customers"} */
+alter view "casestudy"."staging"."stg_raw_staging__customers__dbt_tmp" rename to "stg_raw_staging__customers"
+[0m18:29:59.456153 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:29:59.460541 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__customers: COMMIT
+[0m18:29:59.462054 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__customers"
+[0m18:29:59.463264 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__customers: COMMIT
+[0m18:29:59.467123 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:29:59.471982 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__customers"
+[0m18:29:59.475206 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__customers: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_raw_staging__customers"} */
+
+      drop view if exists "casestudy"."staging"."stg_raw_staging__customers__dbt_backup" cascade
+    
+[0m18:29:59.480527 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:29:59.483391 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__customers: Close
+[0m18:29:59.485085 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a7a349ee-e309-4724-9d3b-2998013d19ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc15fd58f50>]}
+[0m18:29:59.486831 [info ] [Thread-1 (]: 2 of 15 OK created sql view model staging.stg_raw_staging__customers ........... [[32mOK[0m in 0.12s]
+[0m18:29:59.488795 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.stg_raw_staging__customers
+[0m18:29:59.491410 [debug] [Thread-1 (]: Began running node model.vg_casestudy.stg_raw_staging__fx_rates
+[0m18:29:59.493934 [info ] [Thread-1 (]: 3 of 15 START sql view model staging.stg_raw_staging__fx_rates ................. [RUN]
+[0m18:29:59.496637 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vg_casestudy.stg_raw_staging__customers, now model.vg_casestudy.stg_raw_staging__fx_rates)
+[0m18:29:59.498695 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.stg_raw_staging__fx_rates
+[0m18:29:59.521542 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.stg_raw_staging__fx_rates"
+[0m18:29:59.536640 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.stg_raw_staging__fx_rates
+[0m18:29:59.545162 [debug] [Thread-1 (]: Writing runtime sql for node "model.vg_casestudy.stg_raw_staging__fx_rates"
+[0m18:29:59.558506 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__fx_rates"
+[0m18:29:59.561821 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__fx_rates: BEGIN
+[0m18:29:59.563725 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:29:59.566048 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:29:59.568762 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__fx_rates"
+[0m18:29:59.570410 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__fx_rates: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_raw_staging__fx_rates"} */
+
+  
+  create view "casestudy"."staging"."stg_raw_staging__fx_rates__dbt_tmp" as (
+    with source as (
+    select * from "casestudy"."raw"."fx_rates"
+),
+
+renamed as (
+    select
+        trim(currency_iso_code) as currency_iso_code,
+        
+CASE
+    WHEN fx_rate IS NULL THEN NULL
+    -- If the value is already a valid number
+    WHEN TRY_CAST(fx_rate AS DOUBLE) IS NOT NULL 
+        THEN TRY_CAST(fx_rate AS DOUBLE)
+    -- If contains both dot and comma (German notation)
+    WHEN POSITION('.' IN fx_rate) > 0 AND POSITION(',' IN fx_rate) > 0 
+        THEN TRY_CAST(REPLACE(REPLACE(TRIM(fx_rate), '.', ''), ',', '.') AS DOUBLE)
+    -- If only contains comma, treat as decimal point
+    WHEN POSITION(',' IN fx_rate) > 0 
+        THEN TRY_CAST(REPLACE(TRIM(fx_rate), ',', '.') AS DOUBLE)
+    -- If only contains dots, likely thousands separator
+    WHEN POSITION('.' IN fx_rate) > 0 
+        THEN TRY_CAST(REPLACE(TRIM(fx_rate), '.', '') AS DOUBLE)
+    ELSE NULL
+END
+ as fx_rate,
+        
+CASE
+    -- First try DD.MM.YYYY format (German format with dots)
+    WHEN REGEXP_MATCHES(date, '^\d{1,2}\.\d{1,2}\.\d{4}$') 
+        THEN TRY_CAST(STRPTIME(date, '%d.%m.%Y') AS DATE)
+        
+    -- Then try DD/MM/YYYY format (with slashes)
+    WHEN REGEXP_MATCHES(date, '^\d{1,2}/\d{1,2}/\d{4}$')
+        AND CAST(SPLIT_PART(date, '/', 1) AS INTEGER) <= 31 
+        AND CAST(SPLIT_PART(date, '/', 2) AS INTEGER) <= 12 
+        THEN TRY_CAST(STRPTIME(date, '%d/%m/%Y') AS DATE)
+        
+    -- Try MM/DD/YYYY format (US format with slashes)
+    WHEN REGEXP_MATCHES(date, '^\d{1,2}/\d{1,2}/\d{4}$')
+        AND CAST(SPLIT_PART(date, '/', 1) AS INTEGER) <= 12 
+        THEN TRY_CAST(STRPTIME(date, '%m/%d/%Y') AS DATE)
+        
+    -- Try YYYY-MM-DD format (ISO format)
+    WHEN REGEXP_MATCHES(date, '^\d{4}-\d{1,2}-\d{1,2}$')
+        THEN TRY_CAST(STRPTIME(date, '%Y-%m-%d') AS DATE)
+        
+    -- Try generic date parsing as last resort
+    ELSE TRY_CAST(date AS DATE)
+END
+ as fx_rate_date,
+        date as fx_rate_date_raw
+    from source
+    where currency_iso_code is not null and trim(currency_iso_code) not in  ('(none)', '')
+),
+
+final as (
+    select
+        currency_iso_code,
+        fx_rate,
+        fx_rate_date,
+        -- Flag records with date parsing issues
+        CASE WHEN fx_rate_date IS NULL AND fx_rate_date_raw IS NOT NULL
+             THEN TRUE ELSE FALSE 
+        END as has_date_parsing_error
+    from renamed
+)
+
+select * from final
+  );
+
+[0m18:29:59.576021 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:29:59.582794 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__fx_rates"
+[0m18:29:59.584655 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__fx_rates: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_raw_staging__fx_rates"} */
+alter view "casestudy"."staging"."stg_raw_staging__fx_rates" rename to "stg_raw_staging__fx_rates__dbt_backup"
+[0m18:29:59.586971 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:29:59.594739 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__fx_rates"
+[0m18:29:59.596358 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__fx_rates: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_raw_staging__fx_rates"} */
+alter view "casestudy"."staging"."stg_raw_staging__fx_rates__dbt_tmp" rename to "stg_raw_staging__fx_rates"
+[0m18:29:59.598931 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:29:59.601751 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__fx_rates: COMMIT
+[0m18:29:59.603114 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__fx_rates"
+[0m18:29:59.604697 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__fx_rates: COMMIT
+[0m18:29:59.611563 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m18:29:59.617768 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__fx_rates"
+[0m18:29:59.619241 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__fx_rates: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_raw_staging__fx_rates"} */
+
+      drop view if exists "casestudy"."staging"."stg_raw_staging__fx_rates__dbt_backup" cascade
+    
+[0m18:29:59.623187 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:29:59.627411 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__fx_rates: Close
+[0m18:29:59.630147 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a7a349ee-e309-4724-9d3b-2998013d19ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc15f279210>]}
+[0m18:29:59.632186 [info ] [Thread-1 (]: 3 of 15 OK created sql view model staging.stg_raw_staging__fx_rates ............ [[32mOK[0m in 0.13s]
+[0m18:29:59.634103 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.stg_raw_staging__fx_rates
+[0m18:29:59.635721 [debug] [Thread-1 (]: Began running node model.vg_casestudy.stg_staging_intermediate__currencies
+[0m18:29:59.637797 [info ] [Thread-1 (]: 4 of 15 START sql table model intermediate.stg_staging_intermediate__currencies  [RUN]
+[0m18:29:59.640403 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vg_casestudy.stg_raw_staging__fx_rates, now model.vg_casestudy.stg_staging_intermediate__currencies)
+[0m18:29:59.643213 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.stg_staging_intermediate__currencies
+[0m18:29:59.654016 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.stg_staging_intermediate__currencies"
+[0m18:29:59.681899 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.stg_staging_intermediate__currencies
+[0m18:29:59.735309 [debug] [Thread-1 (]: Writing runtime sql for node "model.vg_casestudy.stg_staging_intermediate__currencies"
+[0m18:29:59.750852 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__currencies"
+[0m18:29:59.753061 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__currencies: BEGIN
+[0m18:29:59.754873 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:29:59.758698 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m18:29:59.761427 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__currencies"
+[0m18:29:59.763017 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__currencies: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_staging_intermediate__currencies"} */
+
+  
+    
+    
+
+    create  table
+      "casestudy"."intermediate"."stg_staging_intermediate__currencies__dbt_tmp"
+  
+    as (
+      with staging as (
+    select * from "casestudy"."raw"."currencies"
+),
+cleaned as (
+    select distinct
+        trim(regexp_replace(currency, '\\[.*\\]', '')) as currency,
+        
+        case 
+            when upper(trim(currency_iso_code)) = 'USDOL' then 'USD'
+            when upper(trim(currency_iso_code)) = '(NONE)' then null
+            else upper(trim(currency_iso_code))
+        end as currency_iso_code
+    from staging
+    where currency_iso_code is not null and trim(currency_iso_code) != '(none)'
+)
+
+select * from cleaned
+    );
+  
+  
+[0m18:29:59.785718 [debug] [Thread-1 (]: SQL status: OK in 0.021 seconds
+[0m18:29:59.794173 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__currencies"
+[0m18:29:59.799802 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__currencies: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_staging_intermediate__currencies"} */
+alter table "casestudy"."intermediate"."stg_staging_intermediate__currencies" rename to "stg_staging_intermediate__currencies__dbt_backup"
+[0m18:29:59.802629 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:29:59.812148 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__currencies"
+[0m18:29:59.814507 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__currencies: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_staging_intermediate__currencies"} */
+alter table "casestudy"."intermediate"."stg_staging_intermediate__currencies__dbt_tmp" rename to "stg_staging_intermediate__currencies"
+[0m18:29:59.817140 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:29:59.826936 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__currencies: COMMIT
+[0m18:29:59.829115 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__currencies"
+[0m18:29:59.830911 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__currencies: COMMIT
+[0m18:29:59.837035 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m18:29:59.845250 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__currencies"
+[0m18:29:59.847454 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__currencies: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_staging_intermediate__currencies"} */
+
+      drop table if exists "casestudy"."intermediate"."stg_staging_intermediate__currencies__dbt_backup" cascade
+    
+[0m18:29:59.852310 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:29:59.856096 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__currencies: Close
+[0m18:29:59.861666 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a7a349ee-e309-4724-9d3b-2998013d19ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc15f192f10>]}
+[0m18:29:59.864245 [info ] [Thread-1 (]: 4 of 15 OK created sql table model intermediate.stg_staging_intermediate__currencies  [[32mOK[0m in 0.22s]
+[0m18:29:59.866888 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.stg_staging_intermediate__currencies
+[0m18:29:59.868807 [debug] [Thread-1 (]: Began running node model.vg_casestudy.stg_staging_intermediate__accounts
+[0m18:29:59.870764 [info ] [Thread-1 (]: 5 of 15 START sql table model intermediate.stg_staging_intermediate__accounts .. [RUN]
+[0m18:29:59.875331 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vg_casestudy.stg_staging_intermediate__currencies, now model.vg_casestudy.stg_staging_intermediate__accounts)
+[0m18:29:59.879306 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.stg_staging_intermediate__accounts
+[0m18:29:59.890243 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.stg_staging_intermediate__accounts"
+[0m18:29:59.914775 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.stg_staging_intermediate__accounts
+[0m18:29:59.927458 [debug] [Thread-1 (]: Writing runtime sql for node "model.vg_casestudy.stg_staging_intermediate__accounts"
+[0m18:29:59.945006 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__accounts"
+[0m18:29:59.946962 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__accounts: BEGIN
+[0m18:29:59.948476 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:29:59.951041 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:29:59.952752 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__accounts"
+[0m18:29:59.954708 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__accounts: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_staging_intermediate__accounts"} */
+
+  
+    
+    
+
+    create  table
+      "casestudy"."intermediate"."stg_staging_intermediate__accounts__dbt_tmp"
+  
+    as (
+      with staging as (
+    select * from "casestudy"."staging"."stg_raw_staging__accounts"
+), 
+filtered as (
+    select 
+        account_id,
+        customer_id,
+        account_type,
+        account_opening_date,
+     from staging
+    where not has_date_parsing_error
+)
+
+select * from filtered
+    );
+  
+  
+[0m18:29:59.980926 [debug] [Thread-1 (]: SQL status: OK in 0.024 seconds
+[0m18:29:59.988457 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__accounts"
+[0m18:29:59.992681 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__accounts: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_staging_intermediate__accounts"} */
+alter table "casestudy"."intermediate"."stg_staging_intermediate__accounts" rename to "stg_staging_intermediate__accounts__dbt_backup"
+[0m18:29:59.995960 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:30:00.004359 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__accounts"
+[0m18:30:00.006560 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__accounts: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_staging_intermediate__accounts"} */
+alter table "casestudy"."intermediate"."stg_staging_intermediate__accounts__dbt_tmp" rename to "stg_staging_intermediate__accounts"
+[0m18:30:00.009720 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:30:00.015755 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__accounts: COMMIT
+[0m18:30:00.018095 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__accounts"
+[0m18:30:00.020385 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__accounts: COMMIT
+[0m18:30:00.036561 [debug] [Thread-1 (]: SQL status: OK in 0.013 seconds
+[0m18:30:00.050978 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__accounts"
+[0m18:30:00.053613 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__accounts: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_staging_intermediate__accounts"} */
+
+      drop table if exists "casestudy"."intermediate"."stg_staging_intermediate__accounts__dbt_backup" cascade
+    
+[0m18:30:00.065253 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m18:30:00.068900 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__accounts: Close
+[0m18:30:00.071372 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a7a349ee-e309-4724-9d3b-2998013d19ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc157707510>]}
+[0m18:30:00.075134 [info ] [Thread-1 (]: 5 of 15 OK created sql table model intermediate.stg_staging_intermediate__accounts  [[32mOK[0m in 0.20s]
+[0m18:30:00.079354 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.stg_staging_intermediate__accounts
+[0m18:30:00.081897 [debug] [Thread-1 (]: Began running node model.vg_casestudy.stg_raw_staging__loans
+[0m18:30:00.084601 [info ] [Thread-1 (]: 6 of 15 START sql view model staging.stg_raw_staging__loans .................... [RUN]
+[0m18:30:00.087328 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vg_casestudy.stg_staging_intermediate__accounts, now model.vg_casestudy.stg_raw_staging__loans)
+[0m18:30:00.090757 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.stg_raw_staging__loans
+[0m18:30:00.124668 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.stg_raw_staging__loans"
+[0m18:30:00.149730 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.stg_raw_staging__loans
+[0m18:30:00.169567 [debug] [Thread-1 (]: Writing runtime sql for node "model.vg_casestudy.stg_raw_staging__loans"
+[0m18:30:00.185434 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__loans"
+[0m18:30:00.187048 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__loans: BEGIN
+[0m18:30:00.188924 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:30:00.193486 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m18:30:00.195275 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__loans"
+[0m18:30:00.197679 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__loans: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_raw_staging__loans"} */
+
+  
+  create view "casestudy"."staging"."stg_raw_staging__loans__dbt_tmp" as (
+    with source as (
+    select * from "casestudy"."raw"."loans"
+),
+
+renamed as (
+    select
+        customer_id,
+        loan_id,
+        
+CASE
+    WHEN loan_amount IS NULL THEN NULL
+    -- If the value is already a valid number
+    WHEN TRY_CAST(loan_amount AS DOUBLE) IS NOT NULL 
+        THEN TRY_CAST(loan_amount AS DOUBLE)
+    -- If contains both dot and comma (German notation)
+    WHEN POSITION('.' IN loan_amount) > 0 AND POSITION(',' IN loan_amount) > 0 
+        THEN TRY_CAST(REPLACE(REPLACE(TRIM(loan_amount), '.', ''), ',', '.') AS DOUBLE)
+    -- If only contains comma, treat as decimal point
+    WHEN POSITION(',' IN loan_amount) > 0 
+        THEN TRY_CAST(REPLACE(TRIM(loan_amount), ',', '.') AS DOUBLE)
+    -- If only contains dots, likely thousands separator
+    WHEN POSITION('.' IN loan_amount) > 0 
+        THEN TRY_CAST(REPLACE(TRIM(loan_amount), '.', '') AS DOUBLE)
+    ELSE NULL
+END
+ as loan_amount,
+        loant_type,
+        
+CASE
+    WHEN interest_rate IS NULL THEN NULL
+    -- If the value is already a valid number
+    WHEN TRY_CAST(interest_rate AS DOUBLE) IS NOT NULL 
+        THEN TRY_CAST(interest_rate AS DOUBLE)
+    -- If contains both dot and comma (German notation)
+    WHEN POSITION('.' IN interest_rate) > 0 AND POSITION(',' IN interest_rate) > 0 
+        THEN TRY_CAST(REPLACE(REPLACE(TRIM(interest_rate), '.', ''), ',', '.') AS DOUBLE)
+    -- If only contains comma, treat as decimal point
+    WHEN POSITION(',' IN interest_rate) > 0 
+        THEN TRY_CAST(REPLACE(TRIM(interest_rate), ',', '.') AS DOUBLE)
+    -- If only contains dots, likely thousands separator
+    WHEN POSITION('.' IN interest_rate) > 0 
+        THEN TRY_CAST(REPLACE(TRIM(interest_rate), '.', '') AS DOUBLE)
+    ELSE NULL
+END
+ as interest_rate,
+        loan_term,
+        
+CASE
+    -- First try DD.MM.YYYY format (German format with dots)
+    WHEN REGEXP_MATCHES(approval_rejection_date, '^\d{1,2}\.\d{1,2}\.\d{4}$') 
+        THEN TRY_CAST(STRPTIME(approval_rejection_date, '%d.%m.%Y') AS DATE)
+        
+    -- Then try DD/MM/YYYY format (with slashes)
+    WHEN REGEXP_MATCHES(approval_rejection_date, '^\d{1,2}/\d{1,2}/\d{4}$')
+        AND CAST(SPLIT_PART(approval_rejection_date, '/', 1) AS INTEGER) <= 31 
+        AND CAST(SPLIT_PART(approval_rejection_date, '/', 2) AS INTEGER) <= 12 
+        THEN TRY_CAST(STRPTIME(approval_rejection_date, '%d/%m/%Y') AS DATE)
+        
+    -- Try MM/DD/YYYY format (US format with slashes)
+    WHEN REGEXP_MATCHES(approval_rejection_date, '^\d{1,2}/\d{1,2}/\d{4}$')
+        AND CAST(SPLIT_PART(approval_rejection_date, '/', 1) AS INTEGER) <= 12 
+        THEN TRY_CAST(STRPTIME(approval_rejection_date, '%m/%d/%Y') AS DATE)
+        
+    -- Try YYYY-MM-DD format (ISO format)
+    WHEN REGEXP_MATCHES(approval_rejection_date, '^\d{4}-\d{1,2}-\d{1,2}$')
+        THEN TRY_CAST(STRPTIME(approval_rejection_date, '%Y-%m-%d') AS DATE)
+        
+    -- Try generic date parsing as last resort
+    ELSE TRY_CAST(approval_rejection_date AS DATE)
+END
+ as approval_rejection_date,
+        approval_rejection_date as approval_rejection_date_raw,
+        loan_status
+    from source
+),
+
+final as (
+    select
+        customer_id,
+        loan_id,
+        loan_amount,
+        loant_type as loan_type,
+        interest_rate,
+        loan_term,
+        approval_rejection_date,
+        loan_status,
+        -- Flag records with date parsing issues
+        CASE WHEN approval_rejection_date IS NULL AND approval_rejection_date_raw IS NOT NULL
+             THEN TRUE ELSE FALSE 
+        END as has_date_parsing_error
+    from renamed
+)
+
+select * from final
+  );
+
+[0m18:30:00.203393 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:30:00.213635 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__loans"
+[0m18:30:00.215910 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__loans: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_raw_staging__loans"} */
+alter view "casestudy"."staging"."stg_raw_staging__loans" rename to "stg_raw_staging__loans__dbt_backup"
+[0m18:30:00.218997 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:30:00.229152 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__loans"
+[0m18:30:00.231129 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__loans: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_raw_staging__loans"} */
+alter view "casestudy"."staging"."stg_raw_staging__loans__dbt_tmp" rename to "stg_raw_staging__loans"
+[0m18:30:00.233927 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:30:00.237746 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__loans: COMMIT
+[0m18:30:00.239941 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__loans"
+[0m18:30:00.242489 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__loans: COMMIT
+[0m18:30:00.250382 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m18:30:00.257992 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__loans"
+[0m18:30:00.261299 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__loans: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_raw_staging__loans"} */
+
+      drop view if exists "casestudy"."staging"."stg_raw_staging__loans__dbt_backup" cascade
+    
+[0m18:30:00.266617 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:30:00.270369 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__loans: Close
+[0m18:30:00.274269 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a7a349ee-e309-4724-9d3b-2998013d19ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc157767a10>]}
+[0m18:30:00.277916 [info ] [Thread-1 (]: 6 of 15 OK created sql view model staging.stg_raw_staging__loans ............... [[32mOK[0m in 0.19s]
+[0m18:30:00.280869 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.stg_raw_staging__loans
+[0m18:30:00.283390 [debug] [Thread-1 (]: Began running node model.vg_casestudy.stg_staging_intermediate__customers
+[0m18:30:00.286105 [info ] [Thread-1 (]: 7 of 15 START sql table model intermediate.stg_staging_intermediate__customers . [RUN]
+[0m18:30:00.291280 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vg_casestudy.stg_raw_staging__loans, now model.vg_casestudy.stg_staging_intermediate__customers)
+[0m18:30:00.297725 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.stg_staging_intermediate__customers
+[0m18:30:00.313272 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.stg_staging_intermediate__customers"
+[0m18:30:00.338452 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.stg_staging_intermediate__customers
+[0m18:30:00.350115 [debug] [Thread-1 (]: Writing runtime sql for node "model.vg_casestudy.stg_staging_intermediate__customers"
+[0m18:30:00.371729 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__customers"
+[0m18:30:00.374396 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__customers: BEGIN
+[0m18:30:00.378176 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:30:00.382349 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m18:30:00.384897 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__customers"
+[0m18:30:00.387625 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__customers: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_staging_intermediate__customers"} */
+
+  
+    
+    
+
+    create  table
+      "casestudy"."intermediate"."stg_staging_intermediate__customers__dbt_tmp"
+  
+    as (
+      with staging as (
+    select * from "casestudy"."staging"."stg_raw_staging__customers"
+)
+
+select * from staging
+    );
+  
+  
+[0m18:30:00.420694 [debug] [Thread-1 (]: SQL status: OK in 0.031 seconds
+[0m18:30:00.429582 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__customers"
+[0m18:30:00.431511 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__customers: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_staging_intermediate__customers"} */
+alter table "casestudy"."intermediate"."stg_staging_intermediate__customers" rename to "stg_staging_intermediate__customers__dbt_backup"
+[0m18:30:00.434037 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:30:00.443944 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__customers"
+[0m18:30:00.445702 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__customers: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_staging_intermediate__customers"} */
+alter table "casestudy"."intermediate"."stg_staging_intermediate__customers__dbt_tmp" rename to "stg_staging_intermediate__customers"
+[0m18:30:00.448655 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:30:00.452472 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__customers: COMMIT
+[0m18:30:00.454067 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__customers"
+[0m18:30:00.455518 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__customers: COMMIT
+[0m18:30:00.466338 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m18:30:00.479088 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__customers"
+[0m18:30:00.481081 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__customers: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_staging_intermediate__customers"} */
+
+      drop table if exists "casestudy"."intermediate"."stg_staging_intermediate__customers__dbt_backup" cascade
+    
+[0m18:30:00.485856 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:30:00.489645 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__customers: Close
+[0m18:30:00.493532 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a7a349ee-e309-4724-9d3b-2998013d19ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc157738450>]}
+[0m18:30:00.496143 [info ] [Thread-1 (]: 7 of 15 OK created sql table model intermediate.stg_staging_intermediate__customers  [[32mOK[0m in 0.20s]
+[0m18:30:00.498286 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.stg_staging_intermediate__customers
+[0m18:30:00.499898 [debug] [Thread-1 (]: Began running node model.vg_casestudy.stg_raw_staging__transactions
+[0m18:30:00.501614 [info ] [Thread-1 (]: 8 of 15 START sql view model staging.stg_raw_staging__transactions ............. [RUN]
+[0m18:30:00.504291 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vg_casestudy.stg_staging_intermediate__customers, now model.vg_casestudy.stg_raw_staging__transactions)
+[0m18:30:00.507306 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.stg_raw_staging__transactions
+[0m18:30:00.520977 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.stg_raw_staging__transactions"
+[0m18:30:00.535373 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.stg_raw_staging__transactions
+[0m18:30:00.544938 [debug] [Thread-1 (]: Writing runtime sql for node "model.vg_casestudy.stg_raw_staging__transactions"
+[0m18:30:00.557878 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__transactions"
+[0m18:30:00.560025 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__transactions: BEGIN
+[0m18:30:00.564155 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:30:00.567046 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m18:30:00.568757 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__transactions"
+[0m18:30:00.570329 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__transactions: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_raw_staging__transactions"} */
+
+  
+  create view "casestudy"."staging"."stg_raw_staging__transactions__dbt_tmp" as (
+    with source as (
+    select * from "casestudy"."raw"."transactions"
+),
+
+renamed as (
+    select
+        transaction_id,
+        
+CASE
+    -- First try DD.MM.YYYY format (German format with dots)
+    WHEN REGEXP_MATCHES(transaction_date, '^\d{1,2}\.\d{1,2}\.\d{4}$') 
+        THEN TRY_CAST(STRPTIME(transaction_date, '%d.%m.%Y') AS DATE)
+        
+    -- Then try DD/MM/YYYY format (with slashes)
+    WHEN REGEXP_MATCHES(transaction_date, '^\d{1,2}/\d{1,2}/\d{4}$')
+        AND CAST(SPLIT_PART(transaction_date, '/', 1) AS INTEGER) <= 31 
+        AND CAST(SPLIT_PART(transaction_date, '/', 2) AS INTEGER) <= 12 
+        THEN TRY_CAST(STRPTIME(transaction_date, '%d/%m/%Y') AS DATE)
+        
+    -- Try MM/DD/YYYY format (US format with slashes)
+    WHEN REGEXP_MATCHES(transaction_date, '^\d{1,2}/\d{1,2}/\d{4}$')
+        AND CAST(SPLIT_PART(transaction_date, '/', 1) AS INTEGER) <= 12 
+        THEN TRY_CAST(STRPTIME(transaction_date, '%m/%d/%Y') AS DATE)
+        
+    -- Try YYYY-MM-DD format (ISO format)
+    WHEN REGEXP_MATCHES(transaction_date, '^\d{4}-\d{1,2}-\d{1,2}$')
+        THEN TRY_CAST(STRPTIME(transaction_date, '%Y-%m-%d') AS DATE)
+        
+    -- Try generic date parsing as last resort
+    ELSE TRY_CAST(transaction_date AS DATE)
+END
+ as transaction_date,
+        transaction_date as transaction_date_raw,
+        account_id,
+        trim(transaction_type) as transaction_type,
+        
+CASE
+    WHEN transaction_amount IS NULL THEN NULL
+    -- If the value is already a valid number
+    WHEN TRY_CAST(transaction_amount AS DOUBLE) IS NOT NULL 
+        THEN TRY_CAST(transaction_amount AS DOUBLE)
+    -- If contains both dot and comma (German notation)
+    WHEN POSITION('.' IN transaction_amount) > 0 AND POSITION(',' IN transaction_amount) > 0 
+        THEN TRY_CAST(REPLACE(REPLACE(TRIM(transaction_amount), '.', ''), ',', '.') AS DOUBLE)
+    -- If only contains comma, treat as decimal point
+    WHEN POSITION(',' IN transaction_amount) > 0 
+        THEN TRY_CAST(REPLACE(TRIM(transaction_amount), ',', '.') AS DOUBLE)
+    -- If only contains dots, likely thousands separator
+    WHEN POSITION('.' IN transaction_amount) > 0 
+        THEN TRY_CAST(REPLACE(TRIM(transaction_amount), '.', '') AS DOUBLE)
+    ELSE NULL
+END
+ as transaction_amount,
+        trim(transaction_currency) as transaction_currency
+    from source
+),
+
+final as (
+    select
+        transaction_id,
+        transaction_date,
+        account_id,
+        transaction_type,
+        transaction_amount,
+        transaction_currency,
+        -- Flag records with date parsing issues
+        CASE WHEN transaction_date IS NULL AND transaction_date_raw IS NOT NULL
+             THEN TRUE ELSE FALSE 
+        END as has_date_parsing_error
+    from renamed
+)
+
+select * from final
+  );
+
+[0m18:30:00.576496 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m18:30:00.584364 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__transactions"
+[0m18:30:00.586009 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__transactions: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_raw_staging__transactions"} */
+alter view "casestudy"."staging"."stg_raw_staging__transactions" rename to "stg_raw_staging__transactions__dbt_backup"
+[0m18:30:00.588279 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:30:00.596635 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__transactions"
+[0m18:30:00.598281 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__transactions: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_raw_staging__transactions"} */
+alter view "casestudy"."staging"."stg_raw_staging__transactions__dbt_tmp" rename to "stg_raw_staging__transactions"
+[0m18:30:00.600557 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:30:00.603568 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__transactions: COMMIT
+[0m18:30:00.605059 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__transactions"
+[0m18:30:00.606804 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__transactions: COMMIT
+[0m18:30:00.613294 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m18:30:00.619238 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_raw_staging__transactions"
+[0m18:30:00.620725 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__transactions: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_raw_staging__transactions"} */
+
+      drop view if exists "casestudy"."staging"."stg_raw_staging__transactions__dbt_backup" cascade
+    
+[0m18:30:00.625788 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m18:30:00.629287 [debug] [Thread-1 (]: On model.vg_casestudy.stg_raw_staging__transactions: Close
+[0m18:30:00.631319 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a7a349ee-e309-4724-9d3b-2998013d19ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc15f179890>]}
+[0m18:30:00.633009 [info ] [Thread-1 (]: 8 of 15 OK created sql view model staging.stg_raw_staging__transactions ........ [[32mOK[0m in 0.13s]
+[0m18:30:00.634820 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.stg_raw_staging__transactions
+[0m18:30:00.636337 [debug] [Thread-1 (]: Began running node model.vg_casestudy.stg_staging_intermediate__fx_rates
+[0m18:30:00.638222 [info ] [Thread-1 (]: 9 of 15 START sql table model intermediate.stg_staging_intermediate__fx_rates .. [RUN]
+[0m18:30:00.640873 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vg_casestudy.stg_raw_staging__transactions, now model.vg_casestudy.stg_staging_intermediate__fx_rates)
+[0m18:30:00.644227 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.stg_staging_intermediate__fx_rates
+[0m18:30:00.653541 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.stg_staging_intermediate__fx_rates"
+[0m18:30:00.672035 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.stg_staging_intermediate__fx_rates
+[0m18:30:00.683197 [debug] [Thread-1 (]: Writing runtime sql for node "model.vg_casestudy.stg_staging_intermediate__fx_rates"
+[0m18:30:00.697113 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__fx_rates"
+[0m18:30:00.698617 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__fx_rates: BEGIN
+[0m18:30:00.699816 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:30:00.701840 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:30:00.703741 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__fx_rates"
+[0m18:30:00.706013 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__fx_rates: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_staging_intermediate__fx_rates"} */
+
+  
+    
+    
+
+    create  table
+      "casestudy"."intermediate"."stg_staging_intermediate__fx_rates__dbt_tmp"
+  
+    as (
+      with staging as (
+    select * from "casestudy"."staging"."stg_raw_staging__fx_rates"
+),
+
+filtered as (
+    select
+        currency_iso_code,
+        fx_rate,
+        fx_rate_date
+    from staging
+    where not has_date_parsing_error
+)
+
+select * from filtered
+    );
+  
+  
+[0m18:30:00.721120 [debug] [Thread-1 (]: SQL status: OK in 0.012 seconds
+[0m18:30:00.729615 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__fx_rates"
+[0m18:30:00.731130 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__fx_rates: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_staging_intermediate__fx_rates"} */
+alter table "casestudy"."intermediate"."stg_staging_intermediate__fx_rates" rename to "stg_staging_intermediate__fx_rates__dbt_backup"
+[0m18:30:00.733088 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:30:00.739344 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__fx_rates"
+[0m18:30:00.740953 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__fx_rates: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_staging_intermediate__fx_rates"} */
+alter table "casestudy"."intermediate"."stg_staging_intermediate__fx_rates__dbt_tmp" rename to "stg_staging_intermediate__fx_rates"
+[0m18:30:00.743670 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:30:00.747068 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__fx_rates: COMMIT
+[0m18:30:00.748510 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__fx_rates"
+[0m18:30:00.749896 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__fx_rates: COMMIT
+[0m18:30:00.754988 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:30:00.762906 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__fx_rates"
+[0m18:30:00.764532 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__fx_rates: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_staging_intermediate__fx_rates"} */
+
+      drop table if exists "casestudy"."intermediate"."stg_staging_intermediate__fx_rates__dbt_backup" cascade
+    
+[0m18:30:00.769228 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:30:00.771983 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__fx_rates: Close
+[0m18:30:00.774332 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a7a349ee-e309-4724-9d3b-2998013d19ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc1577bce50>]}
+[0m18:30:00.776904 [info ] [Thread-1 (]: 9 of 15 OK created sql table model intermediate.stg_staging_intermediate__fx_rates  [[32mOK[0m in 0.13s]
+[0m18:30:00.779051 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.stg_staging_intermediate__fx_rates
+[0m18:30:00.781631 [debug] [Thread-1 (]: Began running node model.vg_casestudy.stg_staging_intermediate__loans
+[0m18:30:00.783928 [info ] [Thread-1 (]: 10 of 15 START sql table model intermediate.stg_staging_intermediate__loans .... [RUN]
+[0m18:30:00.786015 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vg_casestudy.stg_staging_intermediate__fx_rates, now model.vg_casestudy.stg_staging_intermediate__loans)
+[0m18:30:00.788122 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.stg_staging_intermediate__loans
+[0m18:30:00.799212 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.stg_staging_intermediate__loans"
+[0m18:30:00.818763 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.stg_staging_intermediate__loans
+[0m18:30:00.830418 [debug] [Thread-1 (]: Writing runtime sql for node "model.vg_casestudy.stg_staging_intermediate__loans"
+[0m18:30:00.844376 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__loans"
+[0m18:30:00.845850 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__loans: BEGIN
+[0m18:30:00.847146 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:30:00.849068 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:30:00.850339 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__loans"
+[0m18:30:00.851671 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__loans: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_staging_intermediate__loans"} */
+
+  
+    
+    
+
+    create  table
+      "casestudy"."intermediate"."stg_staging_intermediate__loans__dbt_tmp"
+  
+    as (
+      with staging as (
+    select * from "casestudy"."staging"."stg_raw_staging__loans"
+),
+
+filtered as (
+    select
+        customer_id,
+        loan_id,
+        loan_amount,
+        loan_type,
+        interest_rate,
+        loan_term,
+        approval_rejection_date,
+        loan_status
+    from staging
+    where not has_date_parsing_error
+)
+
+select * from filtered
+    );
+  
+  
+[0m18:30:00.883549 [debug] [Thread-1 (]: SQL status: OK in 0.031 seconds
+[0m18:30:00.890326 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__loans"
+[0m18:30:00.892316 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__loans: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_staging_intermediate__loans"} */
+alter table "casestudy"."intermediate"."stg_staging_intermediate__loans" rename to "stg_staging_intermediate__loans__dbt_backup"
+[0m18:30:00.895215 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:30:00.902215 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__loans"
+[0m18:30:00.904251 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__loans: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_staging_intermediate__loans"} */
+alter table "casestudy"."intermediate"."stg_staging_intermediate__loans__dbt_tmp" rename to "stg_staging_intermediate__loans"
+[0m18:30:00.906902 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:30:00.910849 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__loans: COMMIT
+[0m18:30:00.912144 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__loans"
+[0m18:30:00.913356 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__loans: COMMIT
+[0m18:30:00.921353 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m18:30:00.927418 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__loans"
+[0m18:30:00.928879 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__loans: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_staging_intermediate__loans"} */
+
+      drop table if exists "casestudy"."intermediate"."stg_staging_intermediate__loans__dbt_backup" cascade
+    
+[0m18:30:00.933536 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:30:00.938769 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__loans: Close
+[0m18:30:00.941411 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a7a349ee-e309-4724-9d3b-2998013d19ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc1604bef90>]}
+[0m18:30:00.943614 [info ] [Thread-1 (]: 10 of 15 OK created sql table model intermediate.stg_staging_intermediate__loans  [[32mOK[0m in 0.16s]
+[0m18:30:00.945568 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.stg_staging_intermediate__loans
+[0m18:30:00.946863 [debug] [Thread-1 (]: Began running node model.vg_casestudy.stg_staging_intermediate__transactions
+[0m18:30:00.948397 [info ] [Thread-1 (]: 11 of 15 START sql table model intermediate.stg_staging_intermediate__transactions  [RUN]
+[0m18:30:00.950367 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vg_casestudy.stg_staging_intermediate__loans, now model.vg_casestudy.stg_staging_intermediate__transactions)
+[0m18:30:00.952128 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.stg_staging_intermediate__transactions
+[0m18:30:00.966961 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.stg_staging_intermediate__transactions"
+[0m18:30:00.979177 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.stg_staging_intermediate__transactions
+[0m18:30:00.986312 [debug] [Thread-1 (]: Writing runtime sql for node "model.vg_casestudy.stg_staging_intermediate__transactions"
+[0m18:30:00.998992 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__transactions"
+[0m18:30:01.000390 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__transactions: BEGIN
+[0m18:30:01.001612 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:30:01.003453 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:30:01.004668 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__transactions"
+[0m18:30:01.006271 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__transactions: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_staging_intermediate__transactions"} */
+
+  
+    
+    
+
+    create  table
+      "casestudy"."intermediate"."stg_staging_intermediate__transactions__dbt_tmp"
+  
+    as (
+      with staging as (
+    select * from "casestudy"."staging"."stg_raw_staging__transactions"
+),
+
+filtered as (
+    select
+        transaction_id,
+        transaction_date,
+        account_id,
+        transaction_type,
+        transaction_amount,
+        transaction_currency
+    from staging
+    where not has_date_parsing_error
+)
+
+select * from filtered
+    );
+  
+  
+[0m18:30:01.118946 [debug] [Thread-1 (]: SQL status: OK in 0.111 seconds
+[0m18:30:01.125873 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__transactions"
+[0m18:30:01.127486 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__transactions: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_staging_intermediate__transactions"} */
+alter table "casestudy"."intermediate"."stg_staging_intermediate__transactions" rename to "stg_staging_intermediate__transactions__dbt_backup"
+[0m18:30:01.129490 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:30:01.135416 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__transactions"
+[0m18:30:01.136931 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__transactions: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_staging_intermediate__transactions"} */
+alter table "casestudy"."intermediate"."stg_staging_intermediate__transactions__dbt_tmp" rename to "stg_staging_intermediate__transactions"
+[0m18:30:01.138986 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:30:01.142074 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__transactions: COMMIT
+[0m18:30:01.143850 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__transactions"
+[0m18:30:01.145559 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__transactions: COMMIT
+[0m18:30:01.196657 [debug] [Thread-1 (]: SQL status: OK in 0.050 seconds
+[0m18:30:01.202118 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.stg_staging_intermediate__transactions"
+[0m18:30:01.203611 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__transactions: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.stg_staging_intermediate__transactions"} */
+
+      drop table if exists "casestudy"."intermediate"."stg_staging_intermediate__transactions__dbt_backup" cascade
+    
+[0m18:30:01.207904 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:30:01.212540 [debug] [Thread-1 (]: On model.vg_casestudy.stg_staging_intermediate__transactions: Close
+[0m18:30:01.215109 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a7a349ee-e309-4724-9d3b-2998013d19ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc1577d7e10>]}
+[0m18:30:01.216957 [info ] [Thread-1 (]: 11 of 15 OK created sql table model intermediate.stg_staging_intermediate__transactions  [[32mOK[0m in 0.26s]
+[0m18:30:01.218886 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.stg_staging_intermediate__transactions
+[0m18:30:01.221103 [debug] [Thread-1 (]: Began running node model.vg_casestudy.mart_branch_performance__summmary
+[0m18:30:01.222731 [info ] [Thread-1 (]: 12 of 15 START sql table model marts.mart_branch_performance__summmary ......... [RUN]
+[0m18:30:01.226665 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vg_casestudy.stg_staging_intermediate__transactions, now model.vg_casestudy.mart_branch_performance__summmary)
+[0m18:30:01.229160 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.mart_branch_performance__summmary
+[0m18:30:01.243105 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.mart_branch_performance__summmary"
+[0m18:30:01.259231 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.mart_branch_performance__summmary
+[0m18:30:01.267958 [debug] [Thread-1 (]: Writing runtime sql for node "model.vg_casestudy.mart_branch_performance__summmary"
+[0m18:30:01.283299 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.mart_branch_performance__summmary"
+[0m18:30:01.284574 [debug] [Thread-1 (]: On model.vg_casestudy.mart_branch_performance__summmary: BEGIN
+[0m18:30:01.285757 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:30:01.289730 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m18:30:01.292134 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.mart_branch_performance__summmary"
+[0m18:30:01.295165 [debug] [Thread-1 (]: On model.vg_casestudy.mart_branch_performance__summmary: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.mart_branch_performance__summmary"} */
+
+  
+    
+    
+
+    create  table
+      "casestudy"."marts"."mart_branch_performance__summmary__dbt_tmp"
+  
+    as (
+      with latest_fx as (
+    select *
+    from "casestudy"."intermediate"."stg_staging_intermediate__fx_rates"
+    qualify row_number() over (
+        partition by currency_iso_code
+        order by fx_rate_date desc
+    ) = 1
+),
+
+loans_with_currency as (
+    select
+        l.loan_id,
+        l.loan_type,
+        l.loan_status,
+        date_trunc('month', l.approval_rejection_date) as month,
+        l.loan_amount,
+        l.loan_term,
+        l.interest_rate,
+        c.age,
+        c.gender,
+        c.branch_id,
+        a.account_id,
+        t.transaction_currency as currency_iso_code,
+        case
+            when c.age between 18 and 25 then '18-25'
+            when c.age between 26 and 35 then '26-35'
+            when c.age between 36 and 45 then '36-45'
+            when c.age between 46 and 60 then '46-60'
+            else '60+'
+        end as age_group
+    from "casestudy"."intermediate"."stg_staging_intermediate__loans" l
+    join "casestudy"."intermediate"."stg_staging_intermediate__customers" c
+        on l.customer_id = c.customer_id
+    join "casestudy"."intermediate"."stg_staging_intermediate__accounts" a
+        on c.customer_id = a.customer_id
+    join "casestudy"."intermediate"."stg_staging_intermediate__transactions" t
+        on a.account_id = t.account_id
+    where l.loan_status = 'approved'
+),
+
+loans_with_fx as (
+    select
+        lwc.*,
+        fx.fx_rate,
+        coalesce(lwc.loan_amount / fx.fx_rate, 0) as loan_amount_eur
+    from loans_with_currency lwc
+    left join latest_fx fx
+        on lower(fx.currency_iso_code) = lower(lwc.currency_iso_code)
+
+),
+
+transactions_with_fx as (
+    select
+        t.transaction_id,
+        t.transaction_type,
+        date_trunc('month', t.transaction_date) as month,
+        t.transaction_amount,
+        t.transaction_currency as currency_iso_code,
+        c.gender,
+        c.branch_id,
+        case
+            when c.age between 18 and 25 then '18-25'
+            when c.age between 26 and 35 then '26-35'
+            when c.age between 36 and 45 then '36-45'
+            when c.age between 46 and 60 then '46-60'
+            else '60+'
+        end as age_group,
+        fx.fx_rate,
+        case
+            when lower(t.transaction_currency) = 'eur' then t.transaction_amount
+            else t.transaction_amount / fx.fx_rate
+        end as transaction_amount_eur
+    from "casestudy"."intermediate"."stg_staging_intermediate__transactions" t
+    join "casestudy"."intermediate"."stg_staging_intermediate__accounts" a
+        on t.account_id = a.account_id
+    join "casestudy"."intermediate"."stg_staging_intermediate__customers" c
+        on a.customer_id = c.customer_id
+    left join latest_fx fx
+        on lower(t.transaction_currency) = lower(fx.currency_iso_code)
+),
+
+loan_summary as (
+    select
+        branch_id,
+        month,
+        gender,
+        age_group,
+        count(*) as total_loan_count,
+        round(sum(loan_amount_eur), 2) as total_loan_amount_eur
+    from loans_with_fx
+    group by 1, 2, 3, 4
+),
+
+transaction_summary as (
+    select
+        branch_id,
+        month,
+        gender,
+        age_group,
+        count(*) as total_transaction_count,
+        round(sum(transaction_amount_eur), 2) as total_transaction_amount_eur
+    from transactions_with_fx
+    group by 1, 2, 3, 4
+)
+
+select
+    coalesce(l.branch_id, t.branch_id) as branch_id,
+    coalesce(l.month, t.month) as month,
+    coalesce(l.gender, t.gender) as gender,
+    coalesce(l.age_group, t.age_group) as age_group,
+    coalesce(total_loan_count, 0) as total_loan_count,
+    coalesce(total_loan_amount_eur, 0) as total_loan_amount_eur,
+    coalesce(total_transaction_count, 0) as total_transaction_count,
+    coalesce(total_transaction_amount_eur, 0) as total_transaction_amount_eur
+from loan_summary l
+full outer join transaction_summary t
+    on l.branch_id = t.branch_id
+    and l.month = t.month
+    and l.gender = t.gender
+    and l.age_group = t.age_group
+    );
+  
+  
+[0m18:30:01.368428 [debug] [Thread-1 (]: SQL status: OK in 0.071 seconds
+[0m18:30:01.374515 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.mart_branch_performance__summmary"
+[0m18:30:01.376489 [debug] [Thread-1 (]: On model.vg_casestudy.mart_branch_performance__summmary: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.mart_branch_performance__summmary"} */
+alter table "casestudy"."marts"."mart_branch_performance__summmary" rename to "mart_branch_performance__summmary__dbt_backup"
+[0m18:30:01.379394 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:30:01.385859 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.mart_branch_performance__summmary"
+[0m18:30:01.387385 [debug] [Thread-1 (]: On model.vg_casestudy.mart_branch_performance__summmary: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.mart_branch_performance__summmary"} */
+alter table "casestudy"."marts"."mart_branch_performance__summmary__dbt_tmp" rename to "mart_branch_performance__summmary"
+[0m18:30:01.389553 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:30:01.393356 [debug] [Thread-1 (]: On model.vg_casestudy.mart_branch_performance__summmary: COMMIT
+[0m18:30:01.395212 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.mart_branch_performance__summmary"
+[0m18:30:01.397558 [debug] [Thread-1 (]: On model.vg_casestudy.mart_branch_performance__summmary: COMMIT
+[0m18:30:01.407720 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m18:30:01.418936 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.mart_branch_performance__summmary"
+[0m18:30:01.420330 [debug] [Thread-1 (]: On model.vg_casestudy.mart_branch_performance__summmary: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.mart_branch_performance__summmary"} */
+
+      drop table if exists "casestudy"."marts"."mart_branch_performance__summmary__dbt_backup" cascade
+    
+[0m18:30:01.424969 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:30:01.428396 [debug] [Thread-1 (]: On model.vg_casestudy.mart_branch_performance__summmary: Close
+[0m18:30:01.433342 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a7a349ee-e309-4724-9d3b-2998013d19ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc15f3efad0>]}
+[0m18:30:01.435149 [info ] [Thread-1 (]: 12 of 15 OK created sql table model marts.mart_branch_performance__summmary .... [[32mOK[0m in 0.21s]
+[0m18:30:01.436955 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.mart_branch_performance__summmary
+[0m18:30:01.438385 [debug] [Thread-1 (]: Began running node model.vg_casestudy.mart_customer__summary
+[0m18:30:01.439966 [info ] [Thread-1 (]: 13 of 15 START sql table model marts.mart_customer__summary .................... [RUN]
+[0m18:30:01.442475 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vg_casestudy.mart_branch_performance__summmary, now model.vg_casestudy.mart_customer__summary)
+[0m18:30:01.444280 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.mart_customer__summary
+[0m18:30:01.453441 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.mart_customer__summary"
+[0m18:30:01.469139 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.mart_customer__summary
+[0m18:30:01.480082 [debug] [Thread-1 (]: Writing runtime sql for node "model.vg_casestudy.mart_customer__summary"
+[0m18:30:01.493305 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.mart_customer__summary"
+[0m18:30:01.495096 [debug] [Thread-1 (]: On model.vg_casestudy.mart_customer__summary: BEGIN
+[0m18:30:01.496780 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:30:01.498793 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:30:01.500208 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.mart_customer__summary"
+[0m18:30:01.501515 [debug] [Thread-1 (]: On model.vg_casestudy.mart_customer__summary: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.mart_customer__summary"} */
+
+  
+    
+    
+
+    create  table
+      "casestudy"."marts"."mart_customer__summary__dbt_tmp"
+  
+    as (
+      with customer_data as (
+    select
+        c.customer_id,
+        c.age,
+        c.firstname,
+        c.lastname,
+        c.branch_id,
+        case
+            when c.age between 18 and 25 then '18-25'
+            when c.age between 26 and 35 then '26-35'
+            when c.age between 36 and 45 then '36-45'
+            when c.age between 46 and 60 then '46-60'
+            else '60+'
+        end as age_group,
+        c.gender
+    from "casestudy"."intermediate"."stg_staging_intermediate__customers" c
+),
+
+loan_data as (
+    select
+        customer_id,
+        loan_type,
+        date_trunc('month', approval_rejection_date) as approval_month
+    from "casestudy"."intermediate"."stg_staging_intermediate__loans"
+    where loan_status = 'approved' 
+        and approval_rejection_date is not null
+),
+
+account_data as (
+    select
+        customer_id,
+        account_type
+    from "casestudy"."intermediate"."stg_staging_intermediate__accounts"
+),
+
+transaction_data as (
+    select
+        a.customer_id,
+        t.transaction_type,
+        date_trunc('month', t.transaction_date) as transaction_month
+    from "casestudy"."intermediate"."stg_staging_intermediate__transactions" t
+    join "casestudy"."intermediate"."stg_staging_intermediate__accounts" a
+        on t.account_id = a.account_id
+)
+
+select
+    cd.age_group,
+    cd.gender,
+    ad.account_type,
+    ld.loan_type,
+    ld.approval_month,
+    td.transaction_type,
+    td.transaction_month,
+    count(distinct cd.customer_id) as customer_count
+from customer_data cd
+left join loan_data ld on cd.customer_id = ld.customer_id
+left join account_data ad on cd.customer_id = ad.customer_id
+left join transaction_data td on cd.customer_id = td.customer_id
+group by 1, 2, 3, 4, 5, 6, 7
+    );
+  
+  
+[0m18:30:01.558809 [debug] [Thread-1 (]: SQL status: OK in 0.054 seconds
+[0m18:30:01.568711 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.mart_customer__summary"
+[0m18:30:01.570789 [debug] [Thread-1 (]: On model.vg_casestudy.mart_customer__summary: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.mart_customer__summary"} */
+alter table "casestudy"."marts"."mart_customer__summary" rename to "mart_customer__summary__dbt_backup"
+[0m18:30:01.573800 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:30:01.583344 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.mart_customer__summary"
+[0m18:30:01.585151 [debug] [Thread-1 (]: On model.vg_casestudy.mart_customer__summary: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.mart_customer__summary"} */
+alter table "casestudy"."marts"."mart_customer__summary__dbt_tmp" rename to "mart_customer__summary"
+[0m18:30:01.587985 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:30:01.593024 [debug] [Thread-1 (]: On model.vg_casestudy.mart_customer__summary: COMMIT
+[0m18:30:01.594882 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.mart_customer__summary"
+[0m18:30:01.597074 [debug] [Thread-1 (]: On model.vg_casestudy.mart_customer__summary: COMMIT
+[0m18:30:01.616258 [debug] [Thread-1 (]: SQL status: OK in 0.017 seconds
+[0m18:30:01.625216 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.mart_customer__summary"
+[0m18:30:01.627421 [debug] [Thread-1 (]: On model.vg_casestudy.mart_customer__summary: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.mart_customer__summary"} */
+
+      drop table if exists "casestudy"."marts"."mart_customer__summary__dbt_backup" cascade
+    
+[0m18:30:01.632947 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:30:01.636902 [debug] [Thread-1 (]: On model.vg_casestudy.mart_customer__summary: Close
+[0m18:30:01.643459 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a7a349ee-e309-4724-9d3b-2998013d19ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc15f1581d0>]}
+[0m18:30:01.646193 [info ] [Thread-1 (]: 13 of 15 OK created sql table model marts.mart_customer__summary ............... [[32mOK[0m in 0.20s]
+[0m18:30:01.648655 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.mart_customer__summary
+[0m18:30:01.650728 [debug] [Thread-1 (]: Began running node model.vg_casestudy.mart_loan__summary
+[0m18:30:01.652982 [info ] [Thread-1 (]: 14 of 15 START sql table model marts.mart_loan__summary ........................ [RUN]
+[0m18:30:01.655172 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vg_casestudy.mart_customer__summary, now model.vg_casestudy.mart_loan__summary)
+[0m18:30:01.659411 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.mart_loan__summary
+[0m18:30:01.679923 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.mart_loan__summary"
+[0m18:30:01.703498 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.mart_loan__summary
+[0m18:30:01.715127 [debug] [Thread-1 (]: Writing runtime sql for node "model.vg_casestudy.mart_loan__summary"
+[0m18:30:01.731140 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.mart_loan__summary"
+[0m18:30:01.733461 [debug] [Thread-1 (]: On model.vg_casestudy.mart_loan__summary: BEGIN
+[0m18:30:01.735627 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:30:01.738708 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:30:01.740549 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.mart_loan__summary"
+[0m18:30:01.742555 [debug] [Thread-1 (]: On model.vg_casestudy.mart_loan__summary: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.mart_loan__summary"} */
+
+  
+    
+    
+
+    create  table
+      "casestudy"."marts"."mart_loan__summary__dbt_tmp"
+  
+    as (
+      with latest_fx as (
+    select *
+    from "casestudy"."intermediate"."stg_staging_intermediate__fx_rates"
+    qualify row_number() over (
+        partition by currency_iso_code
+        order by fx_rate_date desc
+    ) = 1
+),
+
+loans_with_currency as (
+    select
+        l.loan_id,
+        l.loan_type,
+        l.loan_status,
+        date_trunc('month', l.approval_rejection_date) as approval_month,
+        l.loan_amount,
+        l.loan_term,
+        l.interest_rate,
+        c.age,
+        c.gender,
+        a.account_id,
+        t.transaction_currency as currency_iso_code,
+        case
+            when c.age between 18 and 25 then '18-25'
+            when c.age between 26 and 35 then '26-35'
+            when c.age between 36 and 45 then '36-45'
+            when c.age between 46 and 60 then '46-60'
+            else '60+'
+        end as age_group
+    from "casestudy"."intermediate"."stg_staging_intermediate__loans" l
+    join "casestudy"."intermediate"."stg_staging_intermediate__customers" c
+        on l.customer_id = c.customer_id
+    join "casestudy"."intermediate"."stg_staging_intermediate__accounts" a
+        on c.customer_id = a.customer_id
+    join "casestudy"."intermediate"."stg_staging_intermediate__transactions" t
+        on a.account_id = t.account_id
+),
+
+loans_with_fx as (
+    select
+        lwc.*,
+        fx.fx_rate,
+        lwc.loan_amount / fx.fx_rate as loan_amount_eur
+    from loans_with_currency lwc
+    left join latest_fx fx
+        on fx.currency_iso_code = lwc.currency_iso_code
+)
+
+select
+    age_group,
+    gender,
+    loan_type,
+    loan_term,
+    loan_status,
+    approval_month,
+    currency_iso_code,
+    count(*) as loan_count,
+    avg(interest_rate) as avg_interest_rate,
+    sum(loan_amount) as total_loan_amount_original,
+    sum(loan_amount_eur) as total_loan_amount_eur
+from loans_with_fx
+group by 1, 2, 3, 4, 5, 6, 7
+    );
+  
+  
+[0m18:30:01.819145 [debug] [Thread-1 (]: SQL status: OK in 0.074 seconds
+[0m18:30:01.829839 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.mart_loan__summary"
+[0m18:30:01.831352 [debug] [Thread-1 (]: On model.vg_casestudy.mart_loan__summary: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.mart_loan__summary"} */
+alter table "casestudy"."marts"."mart_loan__summary" rename to "mart_loan__summary__dbt_backup"
+[0m18:30:01.833473 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:30:01.839766 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.mart_loan__summary"
+[0m18:30:01.841929 [debug] [Thread-1 (]: On model.vg_casestudy.mart_loan__summary: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.mart_loan__summary"} */
+alter table "casestudy"."marts"."mart_loan__summary__dbt_tmp" rename to "mart_loan__summary"
+[0m18:30:01.844241 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:30:01.847183 [debug] [Thread-1 (]: On model.vg_casestudy.mart_loan__summary: COMMIT
+[0m18:30:01.848631 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.mart_loan__summary"
+[0m18:30:01.849792 [debug] [Thread-1 (]: On model.vg_casestudy.mart_loan__summary: COMMIT
+[0m18:30:01.928144 [debug] [Thread-1 (]: SQL status: OK in 0.077 seconds
+[0m18:30:01.936507 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.mart_loan__summary"
+[0m18:30:01.939264 [debug] [Thread-1 (]: On model.vg_casestudy.mart_loan__summary: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.mart_loan__summary"} */
+
+      drop table if exists "casestudy"."marts"."mart_loan__summary__dbt_backup" cascade
+    
+[0m18:30:01.947491 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m18:30:01.951760 [debug] [Thread-1 (]: On model.vg_casestudy.mart_loan__summary: Close
+[0m18:30:01.960425 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a7a349ee-e309-4724-9d3b-2998013d19ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc15febe0d0>]}
+[0m18:30:01.962835 [info ] [Thread-1 (]: 14 of 15 OK created sql table model marts.mart_loan__summary ................... [[32mOK[0m in 0.31s]
+[0m18:30:01.966214 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.mart_loan__summary
+[0m18:30:01.968615 [debug] [Thread-1 (]: Began running node model.vg_casestudy.mart_transactions__summary
+[0m18:30:01.971384 [info ] [Thread-1 (]: 15 of 15 START sql table model marts.mart_transactions__summary ................ [RUN]
+[0m18:30:01.975147 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.vg_casestudy.mart_loan__summary, now model.vg_casestudy.mart_transactions__summary)
+[0m18:30:01.979277 [debug] [Thread-1 (]: Began compiling node model.vg_casestudy.mart_transactions__summary
+[0m18:30:02.013670 [debug] [Thread-1 (]: Writing injected SQL for node "model.vg_casestudy.mart_transactions__summary"
+[0m18:30:02.035995 [debug] [Thread-1 (]: Began executing node model.vg_casestudy.mart_transactions__summary
+[0m18:30:02.051530 [debug] [Thread-1 (]: Writing runtime sql for node "model.vg_casestudy.mart_transactions__summary"
+[0m18:30:02.092188 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.mart_transactions__summary"
+[0m18:30:02.098077 [debug] [Thread-1 (]: On model.vg_casestudy.mart_transactions__summary: BEGIN
+[0m18:30:02.101299 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:30:02.106132 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m18:30:02.110769 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.mart_transactions__summary"
+[0m18:30:02.114170 [debug] [Thread-1 (]: On model.vg_casestudy.mart_transactions__summary: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.mart_transactions__summary"} */
+
+  
+    
+    
+
+    create  table
+      "casestudy"."marts"."mart_transactions__summary__dbt_tmp"
+  
+    as (
+      with latest_fx as (
+    select *
+    from "casestudy"."intermediate"."stg_staging_intermediate__fx_rates"
+    qualify row_number() over (
+        partition by currency_iso_code
+        order by fx_rate_date desc
+    ) = 1
+),
+
+loans_with_fx as (
+    select
+        l.loan_id,
+        l.loan_type,
+        l.loan_status,
+        date_trunc('month', l.approval_rejection_date) as month,
+        l.loan_amount,
+        l.loan_term,
+        l.interest_rate,
+        c.gender,
+        c.branch_id,
+        case
+            when c.age between 18 and 25 then '18-25'
+            when c.age between 26 and 35 then '26-35'
+            when c.age between 36 and 45 then '36-45'
+            when c.age between 46 and 60 then '46-60'
+            else '60+'
+        end as age_group,
+        fx.fx_rate,
+        l.loan_amount / fx.fx_rate as loan_amount_eur
+    from "casestudy"."intermediate"."stg_staging_intermediate__loans" l
+    join "casestudy"."intermediate"."stg_staging_intermediate__customers" c
+        on l.customer_id = c.customer_id
+    left join latest_fx fx
+        on fx.currency_iso_code = 'EUR'  -- 假設所有貸款為 EUR，或你可改為實際幣別欄位
+    where l.loan_status = 'approved'
+),
+
+transactions_with_fx as (
+    select
+        t.transaction_id,
+        t.transaction_type,
+        date_trunc('month', t.transaction_date) as month,
+        t.transaction_amount,
+        t.transaction_currency as currency_iso_code,
+        c.gender,
+        c.branch_id,
+        case
+            when c.age between 18 and 25 then '18-25'
+            when c.age between 26 and 35 then '26-35'
+            when c.age between 36 and 45 then '36-45'
+            when c.age between 46 and 60 then '46-60'
+            else '60+'
+        end as age_group,
+        fx.fx_rate,
+        case
+            when lower(t.transaction_currency) = 'eur' then t.transaction_amount
+            else t.transaction_amount / fx.fx_rate
+        end as transaction_amount_eur
+    from "casestudy"."intermediate"."stg_staging_intermediate__transactions" t
+    join "casestudy"."intermediate"."stg_staging_intermediate__accounts" a
+        on t.account_id = a.account_id
+    join "casestudy"."intermediate"."stg_staging_intermediate__customers" c
+        on a.customer_id = c.customer_id
+    left join latest_fx fx
+        on lower(t.transaction_currency) = lower(fx.currency_iso_code)
+),
+
+loan_summary as (
+    select
+        branch_id,
+        month,
+        gender,
+        age_group,
+        count(*) as total_loan_count,
+        round(sum(loan_amount_eur), 2) as total_loan_amount_eur
+    from loans_with_fx
+    group by 1, 2, 3, 4
+),
+
+transaction_summary as (
+    select
+        branch_id,
+        month,
+        gender,
+        age_group,
+        count(*) as total_transaction_count,
+        round(sum(transaction_amount_eur), 2) as total_transaction_amount_eur
+    from transactions_with_fx
+    group by 1, 2, 3, 4
+)
+
+select
+    coalesce(l.branch_id, t.branch_id) as branch_id,
+    coalesce(l.month, t.month) as month,
+    coalesce(l.gender, t.gender) as gender,
+    coalesce(l.age_group, t.age_group) as age_group,
+    coalesce(total_loan_count, 0) as total_loan_count,
+    coalesce(total_loan_amount_eur, 0) as total_loan_amount_eur,
+    coalesce(total_transaction_count, 0) as total_transaction_count,
+    coalesce(total_transaction_amount_eur, 0) as total_transaction_amount_eur
+from loan_summary l
+full outer join transaction_summary t
+    on l.branch_id = t.branch_id
+    and l.month = t.month
+    and l.gender = t.gender
+    and l.age_group = t.age_group
+    );
+  
+  
+[0m18:30:02.255206 [debug] [Thread-1 (]: SQL status: OK in 0.137 seconds
+[0m18:30:02.268825 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.mart_transactions__summary"
+[0m18:30:02.271093 [debug] [Thread-1 (]: On model.vg_casestudy.mart_transactions__summary: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.mart_transactions__summary"} */
+alter table "casestudy"."marts"."mart_transactions__summary" rename to "mart_transactions__summary__dbt_backup"
+[0m18:30:02.282095 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:30:02.299211 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.mart_transactions__summary"
+[0m18:30:02.301830 [debug] [Thread-1 (]: On model.vg_casestudy.mart_transactions__summary: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.mart_transactions__summary"} */
+alter table "casestudy"."marts"."mart_transactions__summary__dbt_tmp" rename to "mart_transactions__summary"
+[0m18:30:02.310835 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:30:02.316103 [debug] [Thread-1 (]: On model.vg_casestudy.mart_transactions__summary: COMMIT
+[0m18:30:02.318659 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.mart_transactions__summary"
+[0m18:30:02.321454 [debug] [Thread-1 (]: On model.vg_casestudy.mart_transactions__summary: COMMIT
+[0m18:30:02.342183 [debug] [Thread-1 (]: SQL status: OK in 0.018 seconds
+[0m18:30:02.359175 [debug] [Thread-1 (]: Using duckdb connection "model.vg_casestudy.mart_transactions__summary"
+[0m18:30:02.361787 [debug] [Thread-1 (]: On model.vg_casestudy.mart_transactions__summary: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "default", "target_name": "dev", "node_id": "model.vg_casestudy.mart_transactions__summary"} */
+
+      drop table if exists "casestudy"."marts"."mart_transactions__summary__dbt_backup" cascade
+    
+[0m18:30:02.369791 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m18:30:02.376312 [debug] [Thread-1 (]: On model.vg_casestudy.mart_transactions__summary: Close
+[0m18:30:02.393271 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a7a349ee-e309-4724-9d3b-2998013d19ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc156ec6090>]}
+[0m18:30:02.399990 [info ] [Thread-1 (]: 15 of 15 OK created sql table model marts.mart_transactions__summary ........... [[32mOK[0m in 0.41s]
+[0m18:30:02.408017 [debug] [Thread-1 (]: Finished running node model.vg_casestudy.mart_transactions__summary
+[0m18:30:02.419629 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:30:02.425353 [debug] [MainThread]: On master: BEGIN
+[0m18:30:02.436424 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:30:02.451834 [debug] [MainThread]: SQL status: OK in 0.015 seconds
+[0m18:30:02.455687 [debug] [MainThread]: On master: COMMIT
+[0m18:30:02.465576 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:30:02.469159 [debug] [MainThread]: On master: COMMIT
+[0m18:30:02.480485 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m18:30:02.483261 [debug] [MainThread]: On master: Close
+[0m18:30:02.492025 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:30:02.496688 [debug] [MainThread]: Connection 'model.vg_casestudy.mart_transactions__summary' was properly closed.
+[0m18:30:02.500087 [info ] [MainThread]: 
+[0m18:30:02.503297 [info ] [MainThread]: Finished running 10 table models, 5 view models in 0 hours 0 minutes and 4.30 seconds (4.30s).
+[0m18:30:02.512879 [debug] [MainThread]: Command end result
+[0m18:30:02.830550 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/vg_case_study_data_analyst/transformation/target/manifest.json
+[0m18:30:02.840427 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/vg_case_study_data_analyst/transformation/target/semantic_manifest.json
+[0m18:30:02.859968 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/vg_case_study_data_analyst/transformation/target/run_results.json
+[0m18:30:02.861770 [info ] [MainThread]: 
+[0m18:30:02.863598 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:30:02.865064 [info ] [MainThread]: 
+[0m18:30:02.866469 [info ] [MainThread]: Done. PASS=15 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=15
+[0m18:30:02.881659 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 11.069673, "process_in_blocks": "163680", "process_kernel_time": 1.344811, "process_mem_max_rss": "229780", "process_out_blocks": "0", "process_user_time": 8.141845}
+[0m18:30:02.961613 [debug] [MainThread]: Command `dbt run` succeeded at 18:30:02.961088 after 11.15 seconds
+[0m18:30:02.965875 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc1644d73d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc1644d72d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc168829510>]}
+[0m18:30:02.968966 [debug] [MainThread]: Flushing usage events
+[0m18:30:03.685005 [debug] [MainThread]: An error was encountered while trying to flush usage events
